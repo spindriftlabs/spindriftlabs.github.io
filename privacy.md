@@ -84,6 +84,8 @@ description: How Old Skool Board collects, uses, and protects your information.
 
 <p>All data remains within Atlassian's cloud infrastructure. The app runs on the <a href="https://developer.atlassian.com/platform/forge/">Atlassian Forge</a> platform. There are no external servers, databases, or third-party services.</p>
 
+<p>Atlassian acts as a data processor on our behalf. Their <a href="https://www.atlassian.com/legal/data-processing-addendum">Data Processing Addendum</a> governs how they handle data stored and processed through Forge.</p>
+
 <hr>
 
 <h2>Third-Party Sharing</h2>

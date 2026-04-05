@@ -121,7 +121,8 @@ description: Security architecture and practices for Old Skool Board.
 
 <ol>
   <li>Investigate and contain the issue</li>
-  <li>Notify affected customers via the Marketplace listing and support channels</li>
+  <li><strong>Assess breach scope</strong> — determine whether personal data (e.g. Atlassian account IDs) was involved and whether affected individuals are likely to face risk</li>
+  <li><strong>Notify as required</strong> — if a personal data breach is confirmed, notify the relevant supervisory authority within 72 hours as required by GDPR (Art. 33), and notify affected customers without undue delay where risk to individuals is high (Art. 34). Notification is via the Marketplace listing and support channels.</li>
   <li>Deploy a fix via Forge deployment</li>
   <li>Publish a post-incident summary where appropriate</li>
 </ol>

@@ -1,0 +1,10 @@
+title: Spindrift Labs
+description: Independent software for focused teams.
+url: "https://spindriftlabs.net"
+baseurl: ""
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins: []

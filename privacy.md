@@ -11,7 +11,7 @@ description: How Old Skool Board collects, uses, and protects your information.
       <h1>Privacy Policy</h1>
       <p class="legal-meta">Old Skool Board &nbsp;·&nbsp; Last updated: 31 March 2026</p>
     </div>
-    <div class="legal-body">
+    <div class="legal-body" markdown="1">
 
 <h2>Who We Are</h2>
 

@@ -11,7 +11,7 @@ description: Security architecture and practices for Old Skool Board.
       <h1>Security Statement</h1>
       <p class="legal-meta">Old Skool Board &nbsp;·&nbsp; Last updated: 31 March 2026</p>
     </div>
-    <div class="legal-body">
+    <div class="legal-body" markdown="1">
 
 <h2>Overview</h2>
 

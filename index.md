@@ -19,7 +19,7 @@ description: Old Skool Board shows you which stories your team is trying to fini
       <span class="dot"></span>
       <span class="dot"></span>
     </div>
-    <div class="screenshot-placeholder">Screenshot coming soon</div>
+    <img src="/assets/img/otsc-kanban-screenshot.png" alt="Old Skool Board for Jira — OTSC Kanban board view" class="screenshot-img">
   </div>
 </section>
 

@@ -79,10 +79,18 @@ a {
   letter-spacing: 0.18em;
   color: $text;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 
   &:hover {
     color: $accent;
   }
+}
+
+.site-logo {
+  height: 1.5rem;
+  width: auto;
 }
 
 .site-header nav {

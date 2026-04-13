@@ -30,7 +30,7 @@ description: Old Skool Board shows you which stories your team is trying to fini
         <h2>Old Skool Board on Atlassian Marketplace</h2>
         <p>Jira Cloud &nbsp;·&nbsp; 30-day free trial</p>
       </div>
-      <a href="https://marketplace.atlassian.com" class="cta-link" target="_blank" rel="noopener">
+      <a href="https://marketplace.atlassian.com/apps/3925154041/" class="cta-link" target="_blank" rel="noopener">
         View listing &rarr;
       </a>
     </div>

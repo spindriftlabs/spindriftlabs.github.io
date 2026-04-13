@@ -24,7 +24,7 @@ spindriftlabs.net/docs/release-notes    ← new
 spindriftlabs.net/                       ← existing: support section update only
 ```
 
-`/privacy` and `/security` are unchanged and linked from `/docs/limitations`... *(correction: no limitations page — linked from `/docs/getting-started` and `/docs/using-the-board` where relevant)*.
+`/privacy` and `/security` are unchanged. They are linked from `/docs/getting-started` and `/docs/using-the-board` where relevant.
 
 ---
 

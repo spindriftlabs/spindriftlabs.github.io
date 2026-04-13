@@ -65,6 +65,10 @@ description: Old Skool Board shows you which stories your team is trying to fini
     <h3>Support</h3>
     <div class="support-links">
       <div class="support-item">
+        <span class="support-label">Documentation</span>
+        <a href="{{ '/docs/' | relative_url }}">spindriftlabs.net/docs</a>
+      </div>
+      <div class="support-item">
         <span class="support-label">General support</span>
         <a href="mailto:support@spindriftlabs.net">support@spindriftlabs.net</a>
       </div>

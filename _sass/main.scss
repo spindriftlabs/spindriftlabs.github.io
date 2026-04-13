@@ -465,3 +465,36 @@ a {
     }
   }
 }
+
+/* ─── Docs index ─────────────────────────────────────────── */
+
+.docs-index-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+
+  a {
+    display: block;
+    padding: 1rem 1.25rem;
+    border: 1px solid $divider;
+    border-radius: 4px;
+    text-decoration: none;
+    color: $text;
+
+    &:hover {
+      background: $hover-bg;
+      color: $text;
+    }
+
+    strong {
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    span {
+      font-size: 0.875rem;
+      color: $muted;
+    }
+  }
+}

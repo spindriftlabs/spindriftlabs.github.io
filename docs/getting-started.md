@@ -35,7 +35,7 @@ permalink: /docs/getting-started
 
 <p>Navigate to a Jira project and click <strong>More</strong> in the top navigation bar. In the dropdown, select <strong>Old Skool Board</strong> to open the board.</p>
 
-<img src="{{ '/assets/img/opening-the-board.png' | relative_url }}" alt="Jira project top nav with More dropdown open, showing Old Skool Board" style="width:100%;border:1px solid #e8e4dd;border-radius:4px;margin:0.5rem 0 1rem;">
+<a href="{{ '/assets/img/opening-the-board.png' | relative_url }}" target="_blank"><img src="{{ '/assets/img/opening-the-board.png' | relative_url }}" alt="Jira project top nav with More dropdown open, showing Old Skool Board" style="width:100%;border:1px solid #e8e4dd;border-radius:4px;margin:0.5rem 0 1rem;"></a>
 
 <hr>
 
@@ -51,7 +51,7 @@ permalink: /docs/getting-started
 
 <p>Settings are saved per-project.</p>
 
-<img src="{{ '/assets/img/board-settings.png' | relative_url }}" alt="Board settings panel" style="width:100%;border:1px solid #e8e4dd;border-radius:4px;margin:0.5rem 0 1rem;">
+<a href="{{ '/assets/img/board-settings.png' | relative_url }}" target="_blank"><img src="{{ '/assets/img/board-settings.png' | relative_url }}" alt="Board settings panel" style="width:100%;border:1px solid #e8e4dd;border-radius:4px;margin:0.5rem 0 1rem;"></a>
 
     </div>
 

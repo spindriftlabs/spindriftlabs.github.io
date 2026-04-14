@@ -33,34 +33,31 @@ permalink: /docs/getting-started
 
 <h2>Opening the board</h2>
 
-<p>Navigate to a Jira project and look for <strong>Old Skool Board</strong> in the left sidebar under the project pages. Click it to open the board.</p>
+<p>Navigate to a Jira project and click <strong>More</strong> in the top navigation bar. In the dropdown, select <strong>Old Skool Board</strong> to open the board.</p>
 
-<p><em>[Screenshot: Jira project sidebar with Old Skool Board visible in the left nav]</em></p>
-
-<hr>
-
-<h2>Selecting a board</h2>
-
-<p>The first time you open Old Skool Board in a project, you'll be prompted to select a Jira board to mirror. Old Skool Board shows the same issues as the board you select — pick the one your team uses day-to-day.</p>
-
-<p>Your selection is saved per-project. You can change it later from the settings panel.</p>
-
-<p><em>[Screenshot: Board selector / first-time setup prompt]</em></p>
+<p><em>[Screenshot: Jira project top nav with More dropdown open, showing Old Skool Board]</em></p>
 
 <hr>
 
-<h2>Required Jira permissions</h2>
+<h2>Board settings</h2>
 
-<p>Old Skool Board uses your existing Jira permissions — it can only show and move issues you already have access to. No admin permissions are required to use the board.</p>
-
-<p>The app requests the following Jira scopes on install:</p>
+<p>Click the <strong>settings icon</strong> in the top-right corner of the board to open the Board settings panel. From here you can:</p>
 
 <ul>
-  <li><code>read:jira-work</code> — read issues, boards, and workflows</li>
-  <li><code>write:jira-work</code> — create issues and trigger workflow transitions</li>
-  <li><code>storage:app</code> — save your board preferences</li>
+  <li><strong>Board</strong> — switch to a different Jira board</li>
+  <li><strong>To Do / In Progress / Done status</strong> — map your project's workflow statuses to the three board columns</li>
+  <li><strong>Done retention</strong> (Kanban only) — control how long completed items remain visible before being archived</li>
 </ul>
 
+<p>Settings are saved per-project.</p>
+
+<p><em>[Screenshot: Board settings panel]</em></p>
+
+    </div>
+
+    <div class="docs-page-nav">
+      <span></span>
+      <a href="{{ '/docs/using-the-board' | relative_url }}" class="docs-page-nav-next">Using the board &rarr;</a>
     </div>
   </div>
 </section>

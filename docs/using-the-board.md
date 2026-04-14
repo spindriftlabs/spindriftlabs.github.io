@@ -65,5 +65,10 @@ permalink: /docs/using-the-board
 <p><em>[Screenshot: Settings panel open showing the retention dropdown]</em></p>
 
     </div>
+
+    <div class="docs-page-nav">
+      <a href="{{ '/docs/getting-started' | relative_url }}">&larr; Getting started</a>
+      <a href="{{ '/docs/release-notes' | relative_url }}" class="docs-page-nav-next">Release notes &rarr;</a>
+    </div>
   </div>
 </section>

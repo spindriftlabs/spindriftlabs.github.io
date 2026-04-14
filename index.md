@@ -49,13 +49,6 @@ description: Old Skool Board shows you which stories your team is trying to fini
           <li>Desktop workflows where the full board needs to be visible at once</li>
         </ul>
       </div>
-      <div>
-        <h3>Not a good fit for</h3>
-        <ul>
-          <li>Teams without sub-tasks — the board's value comes from the parent/sub-task relationship</li>
-          <li>Mobile or tablet users — the board is optimised for desktop</li>
-        </ul>
-      </div>
     </div>
   </div>
 </section>

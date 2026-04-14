@@ -41,5 +41,9 @@ permalink: /docs/release-notes
 </ul>
 
     </div>
+
+    <div class="docs-page-nav">
+      <a href="{{ '/docs/using-the-board' | relative_url }}">&larr; Using the board</a>
+    </div>
   </div>
 </section>

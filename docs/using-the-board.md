@@ -20,7 +20,7 @@ permalink: /docs/using-the-board
 
 <p>Parent items appear as yellow cards. Sub-tasks appear as blue cards.</p>
 
-<p><em>[Screenshot: Full board view — To Do / In Progress / Done with sub-task lanes visible]</em></p>
+<img src="{{ '/assets/img/board-layout.png' | relative_url }}" alt="Full board view — To Do / In Progress / Done with sub-task lanes visible" style="width:100%;border:1px solid #e8e4dd;border-radius:4px;margin:0.5rem 0 1rem;">
 
 <hr>
 
@@ -30,7 +30,7 @@ permalink: /docs/using-the-board
 
 <p>If a transition is not permitted by your workflow, you'll see an error message and the card returns to its original position.</p>
 
-<p><em>[Screenshot: Parent item mid-drag between columns]</em></p>
+<img src="{{ '/assets/img/moving-parent-items.png' | relative_url }}" alt="Parent item mid-drag between columns" style="width:100%;border:1px solid #e8e4dd;border-radius:4px;margin:0.5rem 0 1rem;">
 
 <hr>
 
@@ -38,7 +38,7 @@ permalink: /docs/using-the-board
 
 <p>Drag a sub-task between lanes inside the In Progress workspace. Each lane corresponds to a status in your Jira sub-task workflow. You can also reorder sub-tasks within a lane by dragging them up or down.</p>
 
-<p><em>[Screenshot: Sub-task mid-drag between lanes]</em></p>
+<img src="{{ '/assets/img/moving-subtasks.png' | relative_url }}" alt="Sub-task mid-drag between lanes" style="width:100%;border:1px solid #e8e4dd;border-radius:4px;margin:0.5rem 0 1rem;">
 
 <hr>
 
@@ -46,7 +46,7 @@ permalink: /docs/using-the-board
 
 <p>Click <strong>+ Add</strong> at the bottom of any column to create a new parent item, or at the bottom of a sub-task lane to create a sub-task. Type a title and press Enter to save, or Escape to cancel.</p>
 
-<p><em>[Screenshot: Inline create composer open in a column]</em></p>
+<img src="{{ '/assets/img/creating-items-inline.png' | relative_url }}" alt="Inline create composer open in a column" style="width:100%;border:1px solid #e8e4dd;border-radius:4px;margin:0.5rem 0 1rem;">
 
 <hr>
 
@@ -62,7 +62,7 @@ permalink: /docs/using-the-board
 
 <p>This setting is saved per-board to your account. It has no effect on Scrum boards.</p>
 
-<p><em>[Screenshot: Settings panel open showing the retention dropdown]</em></p>
+<img src="{{ '/assets/img/hiding-complete-items.png' | relative_url }}" alt="Settings panel open showing the done retention dropdown" style="width:100%;border:1px solid #e8e4dd;border-radius:4px;margin:0.5rem 0 1rem;">
 
     </div>
 

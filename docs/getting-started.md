@@ -51,7 +51,7 @@ permalink: /docs/getting-started
 
 <p>Settings are saved per-project.</p>
 
-<p><em>[Screenshot: Board settings panel]</em></p>
+<img src="{{ '/assets/img/board-settings.png' | relative_url }}" alt="Board settings panel" style="width:100%;border:1px solid #e8e4dd;border-radius:4px;margin:0.5rem 0 1rem;">
 
     </div>
 

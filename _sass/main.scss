@@ -250,9 +250,7 @@ a {
   border-bottom: 1px solid $divider;
 
   .fit-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
+    max-width: 480px;
   }
 
   h3 {

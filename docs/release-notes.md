@@ -14,9 +14,7 @@ permalink: /docs/release-notes
     </div>
     <div class="legal-body">
 
-<h2>v1.0 — Initial release</h2>
-
-<p class="legal-meta">Coming soon</p>
+<h2>v2.3</h2>
 
 <h3>What's included</h3>
 

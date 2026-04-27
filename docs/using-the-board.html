@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-density="default">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Using the board — Old Skool Board</title>
+  <meta name="description" content="How to use Old Skool Board — layout, moving items, creating issues, and settings." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300..700;1,300..700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/spindrift.css" />
+  <link rel="icon" href="/assets/img/spindrift-labs-logo.png" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="wordmark" href="/" aria-label="Spindrift Labs home">
+        <img src="/assets/img/spindrift-labs-logo.png" alt="" />
+        <span>Spindrift Labs</span>
+      </a>
+      <nav>
+        <a href="/">Old Skool Board</a>
+        <a href="/docs/" aria-current="page">Docs</a>
+        <a href="mailto:support@spindriftlabs.net">Support</a>
+        <a href="/privacy">Privacy</a>
+        <a class="btn btn-primary" href="https://marketplace.atlassian.com/apps/3925154041/" target="_blank" rel="noopener">
+          <span class="nav-text">Install</span> →
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <article class="page">
+        <a class="page-back" href="/docs/">← Docs</a>
+
+        <header class="page-header">
+          <h1>Using the board</h1>
+          <p class="page-meta">Old Skool Board</p>
+        </header>
+
+        <div class="page-body">
+
+          <section>
+            <h2>Board layout</h2>
+            <div class="content">
+              <p>The board has three columns — <strong>To Do</strong>, <strong>In Progress</strong>, and <strong>Done</strong> — derived from Jira status categories. In Progress is the dominant workspace: each parent item shows its sub-tasks arranged into horizontal lanes that match your Jira sub-task workflow.</p>
+              <p>Parent items appear as yellow cards. Sub-tasks appear as blue cards.</p>
+              <a href="/assets/img/board-layout.png" target="_blank">
+                <img src="/assets/img/board-layout.png" alt="Full board view — To Do / In Progress / Done with sub-task lanes visible" class="doc-img" />
+              </a>
+            </div>
+          </section>
+
+          <section>
+            <h2>Moving parent items</h2>
+            <div class="content">
+              <p>Drag a parent item between To Do, In Progress, and Done. This triggers the same Jira workflow transition as moving a card on your native Jira board.</p>
+              <p>If a transition is not permitted by your workflow, you'll see an error message and the card returns to its original position.</p>
+              <a href="/assets/img/moving-parent-items.png" target="_blank">
+                <img src="/assets/img/moving-parent-items.png" alt="Parent item mid-drag between columns" class="doc-img" />
+              </a>
+            </div>
+          </section>
+
+          <section>
+            <h2>Moving sub-tasks</h2>
+            <div class="content">
+              <p>Drag a sub-task between lanes inside the In Progress workspace. Each lane corresponds to a status in your Jira sub-task workflow. You can also reorder sub-tasks within a lane by dragging them up or down.</p>
+              <a href="/assets/img/moving-subtasks.png" target="_blank">
+                <img src="/assets/img/moving-subtasks.png" alt="Sub-task mid-drag between lanes" class="doc-img" />
+              </a>
+            </div>
+          </section>
+
+          <section>
+            <h2>Creating items inline</h2>
+            <div class="content">
+              <p>Click <strong>+ Add</strong> at the bottom of any column to create a new parent item, or at the bottom of a sub-task lane to create a sub-task. Type a title and press Enter to save, or Escape to cancel.</p>
+              <a href="/assets/img/creating-items-inline.png" target="_blank">
+                <img src="/assets/img/creating-items-inline.png" alt="Inline create composer open in a column" class="doc-img" />
+              </a>
+            </div>
+          </section>
+
+          <section>
+            <h2>Opening an issue</h2>
+            <div class="content">
+              <p>Click any card title to open the issue in a modal overlay. The modal shows the issue description, subtasks, comments, and key details — status, assignee, reporter, priority, labels, and due dates — without leaving the board.</p>
+              <p>To open the issue in Jira instead, click the issue key (e.g. <strong>OTSC-77</strong>) in the top-left of the modal.</p>
+              <a href="/assets/img/opening-an-issue.png" target="_blank">
+                <img src="/assets/img/opening-an-issue.png" alt="Issue modal showing Payment Processing story with subtasks and details panel" class="doc-img" />
+              </a>
+            </div>
+          </section>
+
+          <section>
+            <h2>Hiding completed items</h2>
+            <div class="content">
+              <p>On Kanban boards, you can hide parent items that have been in Done for longer than a set period. Click the <strong>settings cog</strong> in the top bar and choose a retention period: 1 week, 2 weeks, 4 weeks, or Keep all.</p>
+              <p>This setting is saved per-board to your account. It has no effect on Scrum boards.</p>
+              <a href="/assets/img/hiding-complete-items.png" target="_blank">
+                <img src="/assets/img/hiding-complete-items.png" alt="Settings panel open showing the done retention dropdown" class="doc-img" />
+              </a>
+            </div>
+          </section>
+
+        </div>
+
+        <div class="docs-page-nav">
+          <a href="/docs/getting-started">← Getting started</a>
+          <a href="/docs/release-notes" class="docs-page-nav-next">Release notes →</a>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="top">
+        <div class="brand">
+          <a class="wordmark" href="/">
+            <img src="/assets/img/spindrift-labs-logo.png" alt="" />
+            <span>Spindrift Labs</span>
+          </a>
+          <p>Independent software for focused teams. Made in Victoria, Australia.</p>
+        </div>
+        <div class="nav-grid">
+          <div>
+            <h4>Product</h4>
+            <a href="https://marketplace.atlassian.com/apps/3925154041/" target="_blank" rel="noopener">Old Skool Board</a>
+            <a href="/docs/">Documentation</a>
+            <a href="mailto:support@spindriftlabs.net">Support</a>
+          </div>
+          <div>
+            <h4>Legal</h4>
+            <a href="/privacy">Privacy</a>
+            <a href="https://marketplace.atlassian.com/apps/3925154041/" target="_blank" rel="noopener">Terms</a>
+            <a href="/security">Security</a>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <span>© 2026 Spindrift Labs · spindriftlabs.net</span>
+        <span>Made on the south coast of Australia</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

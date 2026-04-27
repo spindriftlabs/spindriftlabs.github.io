@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-density="default">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Security Statement — Spindrift Labs</title>
+  <meta name="description" content="Security architecture and practices for Old Skool Board." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300..700;1,300..700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/spindrift.css" />
+  <link rel="icon" href="/assets/img/spindrift-labs-logo.png" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="wordmark" href="/" aria-label="Spindrift Labs home">
+        <img src="/assets/img/spindrift-labs-logo.png" alt="" />
+        <span>Spindrift Labs</span>
+      </a>
+      <nav>
+        <a href="/">Old Skool Board</a>
+        <a href="/docs/">Docs</a>
+        <a href="mailto:support@spindriftlabs.net">Support</a>
+        <a href="/privacy">Privacy</a>
+        <a class="btn btn-primary" href="https://marketplace.atlassian.com/apps/3925154041/" target="_blank" rel="noopener">
+          <span class="nav-text">Install</span> →
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <article class="page">
+        <a class="page-back" href="/">← Back home</a>
+
+        <header class="page-header">
+          <h1>Security Statement</h1>
+          <p class="page-meta">Old Skool Board · Last updated 31 March 2026</p>
+        </header>
+
+        <div class="page-body">
+
+          <section>
+            <h2>Overview</h2>
+            <div class="content">
+              <p>Old Skool Board is a Jira Cloud app built on <a href="https://developer.atlassian.com/platform/forge/">Atlassian Forge</a>, Atlassian's serverless app platform. The app runs entirely on Atlassian's infrastructure. There are no external servers, databases, or third-party services.</p>
+            </div>
+          </section>
+
+          <section>
+            <h2>Architecture</h2>
+            <div class="content">
+              <ul>
+                <li><strong>Platform:</strong> Atlassian Forge (Custom UI)</li>
+                <li><strong>Runtime:</strong> Forge serverless functions (Atlassian-hosted)</li>
+                <li><strong>Frontend:</strong> React application served via Forge Custom UI sandbox</li>
+                <li><strong>Communication:</strong> All API calls are made to Jira Cloud via Forge's <code>requestJira</code> bridge</li>
+                <li><strong>External network calls:</strong> None. The app makes no outbound requests to any server outside Atlassian's infrastructure.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <h2>Data flow</h2>
+            <div class="content">
+              <p>Old Skool Board reads issue, board, and workflow data from Jira Cloud using the Jira REST API via Forge's <code>requestJira</code> mechanism. All data flows between the app and Jira remain within Atlassian's infrastructure.</p>
+              <p>The app does not send data to external servers, use analytics or tracking services, set cookies, or log user activity outside Atlassian's platform.</p>
+            </div>
+          </section>
+
+          <section>
+            <h2>Data storage</h2>
+            <div class="content">
+              <p>The app uses the <a href="https://developer.atlassian.com/platform/forge/runtime-reference/storage-api/">Forge Storage API</a> to persist:</p>
+              <table>
+                <thead>
+                  <tr><th>What</th><th>Purpose</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Selected board preference</td><td>Which board a user last viewed in a project</td></tr>
+                  <tr><td>Board display preferences</td><td>User-specific display settings</td></tr>
+                  <tr><td>Story ordering</td><td>Custom ordering of items on the board</td></tr>
+                </tbody>
+              </table>
+              <p>Storage keys include the user's Atlassian account ID to scope preferences per user. No display names, email addresses, or other personal profile data is stored.</p>
+              <p>All Forge Storage data is encrypted at rest by Atlassian, scoped to the app installation, and deleted when the app is uninstalled.</p>
+            </div>
+          </section>
+
+          <section>
+            <h2>Authentication</h2>
+            <div class="content">
+              <p>Authentication is handled entirely by the Atlassian platform. Old Skool Board does not implement its own authentication. The app respects Jira's existing permission model — users can only view and modify issues they have access to in Jira.</p>
+            </div>
+          </section>
+
+          <section>
+            <h2>Tenant isolation</h2>
+            <div class="content">
+              <p>Forge provides automatic tenant isolation. Each app installation operates in its own isolated context. Cross-tenant data access is prevented at the platform level by Atlassian.</p>
+            </div>
+          </section>
+
+          <section>
+            <h2>Encryption</h2>
+            <div class="content">
+              <ul>
+                <li><strong>At rest:</strong> Forge Storage is encrypted at rest by Atlassian.</li>
+                <li><strong>In transit:</strong> All communication between the app and Jira APIs uses TLS, enforced by the Forge platform.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <h2>Dependencies</h2>
+            <div class="content">
+              <ul>
+                <li>Dependencies are reviewed and updated regularly</li>
+                <li><code>npm audit</code> is run as part of the development workflow</li>
+                <li>Atlassian's Ecoscanner automatically scans all Marketplace apps for known vulnerabilities on an ongoing basis</li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <h2>Vulnerability disclosure</h2>
+            <div class="content">
+              <p>If you discover a security vulnerability in Old Skool Board:</p>
+              <ol>
+                <li><strong>Email:</strong> <a href="mailto:security@spindriftlabs.net">security@spindriftlabs.net</a></li>
+                <li><strong>Do not</strong> disclose the issue publicly until it has been addressed</li>
+                <li>We aim to acknowledge reports within 48 hours and provide a resolution timeline within 5 business days</li>
+              </ol>
+              <p>For non-security bugs and feature requests: <a href="https://github.com/spindriftlabs/old-skool-board-feedback" target="_blank" rel="noopener">github.com/spindriftlabs/old-skool-board-feedback</a></p>
+            </div>
+          </section>
+
+          <section>
+            <h2>Shared responsibility</h2>
+            <div class="content">
+              <p>Old Skool Board runs on Atlassian Forge, which operates under a <a href="https://developer.atlassian.com/platform/forge/shared-responsibility-model/">shared responsibility model</a>.</p>
+              <p><strong>Atlassian is responsible for:</strong> infrastructure security, user authentication, encryption at rest and in transit, tenant isolation, DDoS protection, and platform monitoring.</p>
+              <p><strong>Spindrift Labs is responsible for:</strong> application logic and input validation, output encoding, dependency management, authorisation logic within the app, and responding to security reports about app-specific behaviour.</p>
+            </div>
+          </section>
+
+          <section>
+            <h2>Incident response</h2>
+            <div class="content">
+              <p>In the event of a security incident:</p>
+              <ol>
+                <li>Investigate and contain the issue</li>
+                <li>Assess breach scope — determine whether personal data (e.g. Atlassian account IDs) was involved and whether affected individuals are likely to face risk</li>
+                <li>Notify as required — if a personal data breach is confirmed, notify the relevant supervisory authority within 72 hours as required by GDPR (Art. 33), and notify affected customers without undue delay where risk to individuals is high (Art. 34). Notification is via the Marketplace listing and support channels.</li>
+                <li>Deploy a fix via Forge deployment</li>
+                <li>Publish a post-incident summary where appropriate</li>
+              </ol>
+              <p>For platform-level incidents, Atlassian's own incident response processes apply.</p>
+            </div>
+          </section>
+
+          <section>
+            <h2>Contact</h2>
+            <div class="content">
+              <ul>
+                <li><strong>Security issues:</strong> <a href="mailto:security@spindriftlabs.net">security@spindriftlabs.net</a></li>
+                <li><strong>General support:</strong> <a href="mailto:support@spindriftlabs.net">support@spindriftlabs.net</a></li>
+                <li><strong>Bug reports:</strong> <a href="https://github.com/spindriftlabs/old-skool-board-feedback" target="_blank" rel="noopener">github.com/spindriftlabs/old-skool-board-feedback</a></li>
+              </ul>
+              <p><em>Spindrift Labs is a sole trader business based in Australia.</em></p>
+            </div>
+          </section>
+
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="top">
+        <div class="brand">
+          <a class="wordmark" href="/">
+            <img src="/assets/img/spindrift-labs-logo.png" alt="" />
+            <span>Spindrift Labs</span>
+          </a>
+          <p>Independent software for focused teams. Made in Victoria, Australia.</p>
+        </div>
+        <div class="nav-grid">
+          <div>
+            <h4>Product</h4>
+            <a href="https://marketplace.atlassian.com/apps/3925154041/" target="_blank" rel="noopener">Old Skool Board</a>
+            <a href="/docs/">Documentation</a>
+            <a href="mailto:support@spindriftlabs.net">Support</a>
+          </div>
+          <div>
+            <h4>Legal</h4>
+            <a href="/privacy">Privacy</a>
+            <a href="https://marketplace.atlassian.com/apps/3925154041/" target="_blank" rel="noopener">Terms</a>
+            <a href="/security">Security</a>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <span>© 2026 Spindrift Labs · spindriftlabs.net</span>
+        <span>Made on the south coast of Australia</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

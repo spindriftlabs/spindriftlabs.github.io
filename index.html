@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-density="default">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Old Skool Board for Jira — Spindrift Labs</title>
+  <meta name="description" content="Old Skool Board shows you which stories your team is trying to finish — not just which tasks are moving. A Jira board that keeps the relationship between parent items and sub-tasks in full view." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300..700;1,300..700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/spindrift.css" />
+  <link rel="icon" href="/assets/img/spindrift-labs-logo.png" />
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="wordmark" href="/" aria-label="Spindrift Labs home">
+        <img src="/assets/img/spindrift-labs-logo.png" alt="" />
+        <span>Spindrift Labs</span>
+      </a>
+      <nav>
+        <a href="/" aria-current="page">Old Skool Board</a>
+        <a href="/docs/">Docs</a>
+        <a href="mailto:support@spindriftlabs.net">Support</a>
+        <a href="/privacy">Privacy</a>
+        <a class="btn btn-primary" href="https://marketplace.atlassian.com/apps/3925154041/" target="_blank" rel="noopener">
+          <span class="nav-text">Install</span> →
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <img class="hero-motif" src="/assets/img/spindrift-labs-logo.png" alt="" aria-hidden="true" />
+
+        <span class="product-pill">
+          <span class="dot" aria-hidden="true"></span>
+          <span class="name">Old Skool Board</span>
+          <span class="sub">for Jira Cloud</span>
+        </span>
+
+        <h1>
+          Focus on<br />
+          <span class="gradient">finishing.</span>
+        </h1>
+
+        <p class="hero-intro">
+          A Jira board that shows you which <em>stories</em> your team is trying to finish — not just which tasks are moving. Parent items and sub-tasks stay in full view, side by side.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="https://marketplace.atlassian.com/apps/3925154041/" target="_blank" rel="noopener">
+            Get on Atlassian Marketplace →
+          </a>
+          <a class="btn btn-ghost" href="/docs/">
+            Read the docs
+          </a>
+        </div>
+
+        <div class="hero-meta">
+          <span><i></i>30-day free trial</span>
+          <span><i></i>Runs on Atlassian Forge</span>
+          <span><i></i>No analytics, no cookies</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="shot">
+      <div class="container">
+        <div class="shot-frame">
+          <div class="shot-chrome">
+            <div class="dots" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="url">atlassian.net › jira › boards › old-skool</div>
+          </div>
+          <img class="shot-img" src="/assets/img/otsc-kanban-screenshot.png" alt="Old Skool Board for Jira — kanban view with parent stories pinned beside their sub-task swimlanes." />
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <div class="features-head">
+          <div>
+            <span class="eyebrow">What it does differently</span>
+            <h2>Boards reward movement. We wanted one that rewards finishing.</h2>
+          </div>
+        </div>
+        <div class="features-grid">
+          <article class="feat">
+            <span class="glyph" aria-hidden="true"></span>
+            <div class="tag">[PARENT-VISIBLE]</div>
+            <h3>The story stays in view.</h3>
+            <p>Parent items pin to the left of their swimlane while sub-tasks move through To Do, In Progress, and Done. You always see what's being finished — not just what's moving.</p>
+          </article>
+          <article class="feat">
+            <span class="glyph" aria-hidden="true"></span>
+            <div class="tag">[FULL-BOARD]</div>
+            <h3>Built for the whole board, at once.</h3>
+            <p>Tuned for desktop standups. A typical sprint fits without scrolling. No collapsing, no hover-to-reveal — what you see is the whole board.</p>
+          </article>
+          <article class="feat">
+            <span class="glyph" aria-hidden="true"></span>
+            <div class="tag">[JIRA-NATIVE]</div>
+            <h3>Lives inside Jira Cloud.</h3>
+            <p>Runs on Atlassian Forge. Reads live from the Jira REST API — nothing copied out, no cookies, no analytics, no external servers.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container">
+        <div class="cta-card">
+          <img class="motif" src="/assets/img/spindrift-labs-logo.png" alt="" aria-hidden="true" />
+          <div class="body">
+            <div class="label">ATLASSIAN MARKETPLACE</div>
+            <h2>Try Old Skool Board in your Jira Cloud workspace.</h2>
+            <p>30-day free trial · per-user pricing · install in two clicks.</p>
+            <a class="btn btn-light" href="https://marketplace.atlassian.com/apps/3925154041/" target="_blank" rel="noopener">
+              View listing →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="support-centred">
+      <div class="container">
+        <span class="eyebrow">Support</span>
+        <dl class="dl-clean">
+          <div class="row"><dt>Documentation</dt><dd><a href="/docs/">spindriftlabs.net/docs</a></dd></div>
+          <div class="row"><dt>General support</dt><dd><a href="mailto:support@spindriftlabs.net">support@spindriftlabs.net</a></dd></div>
+          <div class="row"><dt>Bug reports</dt><dd><a href="https://github.com/spindriftlabs/old-skool-board-feedback" target="_blank" rel="noopener">github.com/.../old-skool-board-feedback</a></dd></div>
+          <div class="row"><dt>Security</dt><dd><a href="mailto:security@spindriftlabs.net">security@spindriftlabs.net</a></dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="top">
+        <div class="brand">
+          <a class="wordmark" href="/">
+            <img src="/assets/img/spindrift-labs-logo.png" alt="" />
+            <span>Spindrift Labs</span>
+          </a>
+          <p>Independent software for focused teams. Made in Victoria, Australia.</p>
+        </div>
+        <div class="nav-grid">
+          <div>
+            <h4>Product</h4>
+            <a href="https://marketplace.atlassian.com/apps/3925154041/" target="_blank" rel="noopener">Old Skool Board</a>
+            <a href="/docs/">Documentation</a>
+            <a href="mailto:support@spindriftlabs.net">Support</a>
+          </div>
+          <div>
+            <h4>Legal</h4>
+            <a href="/privacy">Privacy</a>
+            <a href="https://marketplace.atlassian.com/apps/3925154041/" target="_blank" rel="noopener">Terms</a>
+            <a href="/privacy#security">Security</a>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <span>© 2026 Spindrift Labs · spindriftlabs.net</span>
+        <span>Made on the south coast of Australia</span>
+      </div>
+    </div>
+  </footer>
+
+  <div id="tweaks-root"></div>
+  <div class="tweaks-toggle-tip" id="tweaks-tip">Tweaks ready — toggle from the toolbar</div>
+
+  <script type="text/babel" src="/tweaks-panel.jsx"></script>
+  <script type="text/babel" data-presets="react">
+    const TWEAK_DEFAULTS = {
+      "theme": "light",
+      "accent": "#2c4866",
+      "accent2": "#4b6e91",
+      "accent3": "#8aa7c0",
+      "bgWarmth": 0,
+      "headingFont": "Inter Tight",
+      "density": "default",
+      "motifVisible": true,
+      "motifIntensity": 0.65
+    };
+
+    function applyTweaks(t) {
+      const root = document.documentElement;
+      root.dataset.theme = t.theme;
+      root.dataset.density = t.density;
+
+      root.style.setProperty("--c-accent", t.accent);
+      root.style.setProperty("--c-accent-2", t.accent2);
+      root.style.setProperty("--c-accent-3", t.accent3);
+      root.style.setProperty("--c-link", t.theme === "dark" ? mix(t.accent, "#ffffff", 0.5) : t.accent);
+
+      if (t.theme === "light") {
+        const warm = Math.max(0, Math.min(1, t.bgWarmth));
+        const r = Math.round(244 + warm * 9);
+        const g = Math.round(246 + warm * 4);
+        const b = Math.round(248 - warm * 14);
+        root.style.setProperty("--c-bg", `rgb(${r}, ${g}, ${b})`);
+      } else {
+        root.style.setProperty("--c-bg", "#0a1018");
+      }
+
+      const f = t.headingFont === "JetBrains Mono"
+        ? '"JetBrains Mono", monospace'
+        : `"${t.headingFont}", "Inter Tight", system-ui, sans-serif`;
+      document.querySelectorAll("h1, h2, h3, .wordmark span").forEach(el => {
+        el.style.fontFamily = f;
+      });
+
+      const motifs = document.querySelectorAll(".hero-motif, .cta-card .motif");
+      motifs.forEach(el => {
+        el.style.display = t.motifVisible ? "" : "none";
+        if (el.classList.contains("hero-motif")) {
+          el.style.opacity = t.motifIntensity;
+        }
+      });
+    }
+
+    function mix(a, b, t) {
+      const pa = parseHex(a), pb = parseHex(b);
+      const c = pa.map((v, i) => Math.round(v + (pb[i] - v) * t));
+      return `#${c.map(v => v.toString(16).padStart(2, "0")).join("")}`;
+    }
+    function parseHex(h) {
+      const x = h.replace("#", "");
+      return [0, 2, 4].map(i => parseInt(x.slice(i, i + 2), 16));
+    }
+
+    function TweaksApp() {
+      const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+      React.useEffect(() => { applyTweaks(t); }, [t]);
+
+      const fonts = [
+        { value: "Inter Tight",      label: "Inter Tight" },
+        { value: "Fraunces",         label: "Fraunces (serif)" },
+        { value: "JetBrains Mono",   label: "JetBrains Mono" },
+      ];
+
+      React.useEffect(() => {
+        if (t.headingFont === "Fraunces" && !document.getElementById("fraunces-link")) {
+          const l = document.createElement("link");
+          l.id = "fraunces-link";
+          l.rel = "stylesheet";
+          l.href = "https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&display=swap";
+          document.head.appendChild(l);
+        }
+      }, [t.headingFont]);
+
+      return (
+        <TweaksPanel title="Tweaks">
+          <TweakSection title="Theme">
+            <TweakRadio
+              label="Mode"
+              value={t.theme}
+              onChange={v => setTweak("theme", v)}
+              options={[{value: "light", label: "Light"}, {value: "dark", label: "Dark"}]}
+            />
+            <TweakRadio
+              label="Density"
+              value={t.density}
+              onChange={v => setTweak("density", v)}
+              options={[{value: "default", label: "Roomy"}, {value: "compact", label: "Compact"}]}
+            />
+          </TweakSection>
+
+          <TweakSection title="Color">
+            <TweakColor label="Accent (deep)"  value={t.accent}  onChange={v => setTweak("accent", v)} />
+            <TweakColor label="Accent (mid)"   value={t.accent2} onChange={v => setTweak("accent2", v)} />
+            <TweakColor label="Accent (mist)"  value={t.accent3} onChange={v => setTweak("accent3", v)} />
+            <TweakSlider label="Background warmth" min={0} max={1} step={0.05} value={t.bgWarmth} onChange={v => setTweak("bgWarmth", v)} />
+          </TweakSection>
+
+          <TweakSection title="Typography">
+            <TweakSelect
+              label="Heading font"
+              value={t.headingFont}
+              onChange={v => setTweak("headingFont", v)}
+              options={fonts}
+            />
+          </TweakSection>
+
+          <TweakSection title="Logo motif">
+            <TweakToggle  label="Show in hero" value={t.motifVisible}   onChange={v => setTweak("motifVisible", v)} />
+            <TweakSlider label="Intensity"     min={0} max={1} step={0.05} value={t.motifIntensity} onChange={v => setTweak("motifIntensity", v)} />
+          </TweakSection>
+        </TweaksPanel>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById("tweaks-root")).render(<TweaksApp />);
+
+    applyTweaks(TWEAK_DEFAULTS);
+
+    const tip = document.getElementById("tweaks-tip");
+    setTimeout(() => { tip.classList.add("show"); }, 800);
+    setTimeout(() => { tip.classList.remove("show"); }, 5800);
+  </script>
+</body>
+</html>

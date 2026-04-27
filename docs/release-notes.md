@@ -23,6 +23,7 @@ permalink: /docs/release-notes
   <li>Sub-task lanes driven by your Jira workflow</li>
   <li>Drag-and-drop for parent items and sub-tasks</li>
   <li>Inline creation for parent items and sub-tasks</li>
+  <li>Modal issue view — open any card to see and edit its description, subtasks, comments, and details without leaving the board</li>
   <li>Board selection and per-user preferences</li>
   <li>Kanban retention setting — hide completed items older than 1, 2, or 4 weeks</li>
   <li>Split-pane In Progress layout — fixed parent item panel with scrollable sub-task lanes</li>
@@ -31,6 +32,7 @@ permalink: /docs/release-notes
 <h3>Known limitations</h3>
 
 <ul>
+  <li>Rich text descriptions can't be edited directly in the modal — if an issue has rich text formatting, an <strong>Edit in Jira</strong> link appears to open the native Jira editor instead</li>
   <li>Desktop only — mobile and tablet are not supported</li>
   <li>Jira Cloud only — Server and Data Center are not supported</li>
   <li>Requires parent items with sub-tasks — limited value for flat issue structures</li>

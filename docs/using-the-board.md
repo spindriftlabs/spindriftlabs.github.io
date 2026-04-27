@@ -52,7 +52,11 @@ permalink: /docs/using-the-board
 
 <h2>Opening an issue</h2>
 
-<p>Click any card title to open the full Jira issue. It will open in a new tab.</p>
+<p>Click any card title to open the issue in a modal overlay. The modal shows the issue description, subtasks, comments, and key details — status, assignee, reporter, priority, labels, and due dates — without leaving the board.</p>
+
+<p>To open the issue in Jira instead, click the issue key (e.g. <strong>OTSC-77</strong>) in the top-left of the modal.</p>
+
+<a href="{{ '/assets/img/opening-an-issue.png' | relative_url }}" target="_blank"><img src="{{ '/assets/img/opening-an-issue.png' | relative_url }}" alt="Issue modal showing Payment Processing story with subtasks and details panel" style="width:100%;border:1px solid #e8e4dd;border-radius:4px;margin:0.5rem 0 1rem;"></a>
 
 <hr>
 

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" fill="none">
+  <title>OldSkoolBoard</title>
+
+  <!-- Background -->
+  <rect width="1024" height="1024" rx="180" fill="#FFFFFF"/>
+
+  <!-- Yellow card 1 (top) — scaled 90%, padded to 123px -->
+  <rect x="123" y="123" width="202" height="499" rx="22" fill="#FBBF24"/>
+
+  <!-- Yellow card 2 (bottom) -->
+  <rect x="123" y="649" width="202" height="252" rx="22" fill="#FBBF24"/>
+
+  <!-- Vertical divider -->
+  <rect x="342" y="123" width="2" height="778" rx="1" fill="#1E293B"/>
+
+  <!-- Horizontal divider (between rows 2 and 3) -->
+  <rect x="123" y="635" width="777" height="2" rx="1" fill="#1E293B"/>
+
+  <!-- Cell 1 — Light grey -->
+  <rect x="362" y="123" width="170" height="236" rx="18" fill="#94A3B8"/>
+
+  <!-- Cell 2 — Soft blue -->
+  <rect x="546" y="123" width="170" height="236" rx="18" fill="#93C5FD"/>
+
+  <!-- Cell 3 — Soft green -->
+  <rect x="730" y="123" width="170" height="236" rx="18" fill="#86EFAC"/>
+
+  <!-- Cell 4 — Very light grey -->
+  <rect x="362" y="386" width="170" height="236" rx="18" fill="#F1F5F9"/>
+
+  <!-- Cell 5 — Very light grey -->
+  <rect x="546" y="386" width="170" height="236" rx="18" fill="#F1F5F9"/>
+
+  <!-- Cell 6 — Soft green -->
+  <rect x="730" y="386" width="170" height="236" rx="18" fill="#86EFAC"/>
+
+  <!-- Cell 7 — Light grey -->
+  <rect x="362" y="649" width="170" height="252" rx="18" fill="#94A3B8"/>
+
+  <!-- Cell 8 — Very light grey -->
+  <rect x="546" y="649" width="170" height="252" rx="18" fill="#F1F5F9"/>
+
+  <!-- Cell 9 — Very light grey -->
+  <rect x="730" y="649" width="170" height="252" rx="18" fill="#F1F5F9"/>
+
+</svg>

@@ -204,9 +204,9 @@ a:focus-visible {
   position: absolute;
   pointer-events: none;
   top: -120px;
-  right: calc(var(--pad-x) * -0.5);
-  width: 760px;
-  max-width: 60vw;
+  right: -120px;
+  width: 660px;
+  max-width: 50vw;
   opacity: 0.65;
   -webkit-mask-image: radial-gradient(circle at 30% 50%, black 25%, transparent 75%);
           mask-image: radial-gradient(circle at 30% 50%, black 25%, transparent 75%);

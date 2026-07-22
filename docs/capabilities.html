@@ -5,8 +5,8 @@
   <!-- Google Analytics loads only after cookie consent (assets/js/consent.js) -->
   <script src="/assets/js/consent.js" defer></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Getting started — Old Skool Board</title>
-  <meta name="description" content="How to install and set up Old Skool Board for Jira." />
+  <title>Capabilities — Old Skool Board</title>
+  <meta name="description" content="Everything Old Skool Board can do today — board layout, issue modal, filtering, drag-and-drop ranking, and more." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300..700;1,300..700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -40,17 +40,85 @@
         <a class="page-back" href="/docs/">← Docs</a>
 
         <header class="page-header">
-          <h1>Getting started</h1>
-          <p class="page-meta">Old Skool Board</p>
+          <h1>What Old Skool Board can do</h1>
+          <p class="page-meta">Current capabilities</p>
         </header>
 
         <div class="page-body">
 
           <section>
-            <h2>How Old Skool Board works</h2>
+            <h2>Board layout</h2>
             <div class="content">
-              <p>Old Skool Board is an extension of a Jira Software board — there is no need to create new boards from scratch. When you open it, it reads the configuration of whichever board you're currently viewing — columns, statuses, and board type (Kanban or Scrum) — and mirrors that setup automatically.</p>
-              <p>It picks up where your board leaves off.</p>
+              <ul>
+                <li>Three-column board — To Do, In Progress, and Done — Jira statuses mapped to status categories</li>
+                <li>Sub-task lanes in the In Progress column, driven by your Jira workflow</li>
+                <li>Split-pane layout — fixed parent item panel with scrollable sub-task lanes</li>
+                <li>Epic chips on cards, colour-coded to match Jira</li>
+                <li>Issue type icons on every card</li>
+                <li>Kanban retention — hide completed items older than 1, 2, or 4 weeks</li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <h2>Issue modal</h2>
+            <div class="content">
+              <p>Click any card to open its full detail view without leaving the board.</p>
+              <ul>
+                <li>Rich text description editing with bold, italic, underline, links, and lists (powered by TipTap)</li>
+                <li>@mentions — type <code>@</code> to search and mention teammates</li>
+                <li>Comments — read, add, and reply</li>
+                <li>Linked issues and sub-tasks, with drill-in navigation</li>
+                <li>Detail sidebar — edit assignee, priority, labels, status, due date, and start date</li>
+                <li>Change issue type from the card or the modal</li>
+                <li>Inline title editing</li>
+                <li>Open in Jira — Cmd/Ctrl-click a card or use the modal link to jump to native Jira</li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <h2>Drag-and-drop</h2>
+            <div class="content">
+              <ul>
+                <li>Reorder parent items and sub-tasks by dragging</li>
+                <li>Drag items between columns to trigger Jira status transitions</li>
+                <li>Ranking syncs to Jira — drag order updates your backlog's native rank</li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <h2>Filtering</h2>
+            <div class="content">
+              <ul>
+                <li>Text search across the board</li>
+                <li>Filter by issue type or label (multi-select)</li>
+                <li>Quick filters — toggle pills that match your Jira board's quick filter definitions</li>
+                <li>Filter selections persist per board</li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <h2>Creating work</h2>
+            <div class="content">
+              <ul>
+                <li>Inline creation for parent items and sub-tasks — add work without leaving the board</li>
+                <li>Choose issue type when creating</li>
+                <li>New sub-tasks land in the correct lane and status</li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <h2>Board management</h2>
+            <div class="content">
+              <ul>
+                <li>Automatically maps to your current Jira board</li>
+                <li>Column-to-status mapping — map your three columns to the right Jira statuses on first use</li>
+                <li>Per-user preferences saved automatically</li>
+              </ul>
             </div>
           </section>
 
@@ -58,65 +126,18 @@
             <h2>Requirements</h2>
             <div class="content">
               <ul>
-                <li><strong>Jira Software board</strong> — designed to work with existing Scrum or Kanban boards; other board types are not supported</li>
-                <li><strong>Jira Cloud</strong> — Server and Data Center are not supported</li>
-                <li><strong>Desktop browser</strong> — mobile and tablet are not supported</li>
-                <li><strong>Parent items with sub-tasks</strong> — the board's value comes from that relationship; it has limited use for flat issue structures</li>
+                <li>Jira Cloud (Server and Data Center are not supported)</li>
+                <li>Desktop browser (mobile and tablet are not supported)</li>
+                <li>Works best with parent items that have sub-tasks — limited value for flat issue structures</li>
+                <li>Active Marketplace license required</li>
               </ul>
-            </div>
-          </section>
-
-          <section>
-            <h2>How the board works best</h2>
-            <div class="content">
-              <p>Old Skool Board maps your work items to one of three columns — <strong>To Do</strong>, <strong>In Progress</strong>, and <strong>Done</strong> — using Jira's status category system. Sub-tasks use their actual Jira status, appearing as lanes inside the In Progress workspace.</p>
-              <p>This means the board will work with any workflow structure you already have.</p>
-              <p>That said, we've found it works best when:</p>
-              <ul>
-                <li><strong>Work items</strong> have three statuses — one mapped to each category: To Do, In Progress, and Done</li>
-                <li><strong>Sub-tasks</strong> have their own dedicated workflow, separate from work items</li>
-              </ul>
-              <p>When work items are kept simple and sub-tasks carry the detail, the In Progress workspace becomes a genuinely useful view of what's actually happening inside each item. But how you structure your Jira project is entirely up to you.</p>
-            </div>
-          </section>
-
-          <section>
-            <h2>Installing</h2>
-            <div class="content">
-              <p>Find Old Skool Board on the <a href="https://marketplace.atlassian.com/apps/3925154041/?utm_source=spindriftlabs&utm_medium=website&utm_campaign=first-ten-teams" target="_blank" rel="noopener">Atlassian Marketplace</a> and install it to your Jira Cloud site. Once installed, it appears as a page inside your Jira projects.</p>
-            </div>
-          </section>
-
-          <section>
-            <h2>Opening the board</h2>
-            <div class="content">
-              <p>Navigate to a Jira project and click <strong>More</strong> in the top navigation bar. In the dropdown, select <strong>Old Skool Board</strong> to open the board.</p>
-              <a href="/assets/img/opening-the-board.png" target="_blank">
-                <img src="/assets/img/opening-the-board.png" alt="Jira project top nav with More dropdown open, showing Old Skool Board" class="doc-img" />
-              </a>
-            </div>
-          </section>
-
-          <section>
-            <h2>Board settings</h2>
-            <div class="content">
-              <p>Click the <strong>settings icon</strong> in the top-right corner of the board to open the Board settings panel. From here you can:</p>
-              <ul>
-                <li><strong>To Do / In Progress / Done status</strong> — map your project's workflow statuses to the three board columns</li>
-                <li><strong>Done retention</strong> (Kanban only) — control how long completed items remain visible before being archived</li>
-              </ul>
-              <p>Settings are saved per-project.</p>
-              <a href="/assets/img/board-settings.png" target="_blank">
-                <img src="/assets/img/board-settings.png" alt="Board settings panel" class="doc-img" />
-              </a>
             </div>
           </section>
 
         </div>
 
         <div class="docs-page-nav">
-          <span></span>
-          <a href="/docs/using-the-board" class="docs-page-nav-next">Using the board →</a>
+          <a href="/docs/using-the-board">← Using the board</a>
         </div>
       </article>
     </div>

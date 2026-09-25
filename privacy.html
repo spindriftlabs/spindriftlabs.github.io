@@ -41,7 +41,7 @@
 
         <header class="page-header">
           <h1>Privacy Policy</h1>
-          <p class="page-meta">Old Skool Board · Last updated 17 July 2026</p>
+          <p class="page-meta">Old Skool Board · Last updated 25 September 2026</p>
         </header>
 
         <div class="page-body">
@@ -67,13 +67,14 @@
           <section>
             <h2>Data we access</h2>
             <div class="content">
-              <p>Old Skool Board accesses the following data from your Jira Cloud instance via the Jira REST API:</p>
+              <p>Old Skool Board reads and updates the following data in your Jira Cloud instance via the Jira REST API:</p>
               <ul>
-                <li><strong>Board and project configuration</strong> — board names, columns, workflows</li>
-                <li><strong>Issue data</strong> — issue summaries, statuses, issue types, assignees, priorities</li>
-                <li><strong>User information</strong> — display names and account identifiers (as provided by Jira for display purposes)</li>
+                <li><strong>Board and project configuration</strong> — board names, columns, filters, quick filters, workflows, issue types, and priorities</li>
+                <li><strong>Work item data</strong> — summaries, descriptions, comments, statuses, issue types, assignees, reporters, priorities, labels, dates, parents, links, epics, and sprints</li>
+                <li><strong>User information</strong> — display names, avatars, and account identifiers (as provided by Jira for display purposes), including the results of user searches when you @mention someone or change an assignee</li>
               </ul>
               <p>This data is read live from Jira each time you use the app. It is not copied to external systems.</p>
+              <p>When you act on the board, the app makes the change in Jira for you: it creates work items and sub-tasks, changes status, edits fields and comments, and sets rank when you reorder cards. Every change is made as you, using your own Jira permissions, and appears in Jira's history like any other change.</p>
             </div>
           </section>
 
@@ -86,12 +87,14 @@
                   <tr><th>What</th><th>Purpose</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>Selected board preference</td><td>Remembers which board you last viewed in a project</td></tr>
-                  <tr><td>Board display preferences</td><td>Your display settings (e.g. completed item retention period)</td></tr>
-                  <tr><td>Work item ordering</td><td>Custom ordering of items on the board</td></tr>
+                  <tr><td>Selected board preference</td><td>Remembers which board you last viewed in a project (its ID and name)</td></tr>
+                  <tr><td>Board preferences</td><td>Your settings and last-used filters for each board: completed item retention, type, label and quick-filter selections, whether quick filters are shown, and default statuses for creating items</td></tr>
+                  <tr><td>Sub-task lane order</td><td>The order of sub-tasks within each lane (work item order is kept in Jira's own rank, not by the app)</td></tr>
+                  <tr><td>Usage prompt state</td><td>The date you first used the app, the date you first used it on a paid licence, a count of board visits, and whether each prompt has been shown — used to time the in-app feedback and review prompts</td></tr>
+                  <tr><td>Work item order (earlier versions)</td><td>Versions before 3.10 stored work item keys in the order you arranged them. These records are no longer written or read, and are deleted when the app is uninstalled</td></tr>
                 </tbody>
               </table>
-              <p>These preferences are scoped per user using your Atlassian account identifier. No display names, email addresses, or other profile data is stored.</p>
+              <p>Preferences and prompt state are stored per user, keyed by your Atlassian account identifier. Sub-task lane order is shared by everyone in the project and contains only work item keys. No display names, email addresses, or other profile data is stored.</p>
               <p>All stored data resides entirely within Atlassian's cloud infrastructure and is encrypted at rest by Atlassian.</p>
             </div>
           </section>
@@ -105,10 +108,10 @@
                 <li>Set cookies</li>
                 <li>Send data to external servers or third parties</li>
                 <li>Collect email addresses, IP addresses, or device information</li>
-                <li>Log user activity</li>
+                <li>Record which work items you view or change (the only usage data kept is the per-user board visit count listed above)</li>
                 <li>Use advertising or profiling</li>
               </ul>
-              <p>This is unchanged and still fully accurate — the app makes no outbound requests to anything outside Atlassian's infrastructure (see the <a href="/security">Security Statement</a>).</p>
+              <p>The app makes no outbound requests to anything outside Atlassian's infrastructure (see the <a href="/security">Security Statement</a>).</p>
             </div>
           </section>
 
@@ -145,7 +148,8 @@
             <h2>Retention &amp; deletion</h2>
             <div class="content">
               <ul>
-                <li>Stored preferences are retained for as long as the app is installed</li>
+                <li>Stored data is retained for as long as the app is installed</li>
+                <li>Each week the app reports the account identifiers stored with board preferences and selected-board records to Atlassian, and deletes those records for any account Atlassian reports as closed</li>
                 <li>When the app is uninstalled, all Forge Storage data associated with the installation is deleted</li>
                 <li>There is no data retained after uninstallation</li>
               </ul>
@@ -157,7 +161,7 @@
             <div class="content">
               <h3>Under GDPR (European Economic Area)</h3>
               <p>If you are in the EEA, you have the right to access, rectify, erase, restrict, port, and object to processing of your personal data. To exercise these rights, contact <a href="mailto:support@spindriftlabs.net">support@spindriftlabs.net</a>.</p>
-              <p><strong>Legal basis for processing:</strong> We process account identifiers on the basis of legitimate interest (Article 6(1)(f)) — specifically, to provide per-user preferences within the app.</p>
+              <p><strong>Legal basis for processing:</strong> We process account identifiers on the basis of legitimate interest (Article 6(1)(f)) — specifically, to provide per-user preferences within the app and to time in-app feedback and review prompts.</p>
               <h3>Under CCPA (California)</h3>
               <p>We do not sell or share personal information as defined under the California Consumer Privacy Act.</p>
             </div>

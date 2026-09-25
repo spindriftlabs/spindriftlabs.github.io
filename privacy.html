@@ -41,7 +41,7 @@
 
         <header class="page-header">
           <h1>Privacy Policy</h1>
-          <p class="page-meta">Old Skool Board · Last updated 17 July 2026</p>
+          <p class="page-meta">Old Skool Board · Last updated 25 September 2026</p>
         </header>
 
         <div class="page-body">
@@ -67,13 +67,14 @@
           <section>
             <h2>Data we access</h2>
             <div class="content">
-              <p>Old Skool Board accesses the following data from your Jira Cloud instance via the Jira REST API:</p>
+              <p>Old Skool Board reads and updates the following data in your Jira Cloud instance via the Jira REST API:</p>
               <ul>
-                <li><strong>Board and project configuration</strong> — board names, columns, workflows</li>
-                <li><strong>Issue data</strong> — issue summaries, statuses, issue types, assignees, priorities</li>
-                <li><strong>User information</strong> — display names and account identifiers (as provided by Jira for display purposes)</li>
+                <li><strong>Board and project configuration</strong> — board names, columns, filters, quick filters, workflows</li>
+                <li><strong>Work item data</strong> — summaries, descriptions, comments, statuses, issue types, assignees, priorities, labels, dates, epics, and sprints</li>
+                <li><strong>User information</strong> — display names, avatars, and account identifiers (as provided by Jira for display purposes), and user search when you @mention someone or change an assignee</li>
               </ul>
               <p>This data is read live from Jira each time you use the app. It is not copied to external systems.</p>
+              <p>When you act on the board, the app makes the change in Jira for you: it creates work items and sub-tasks, changes status, edits fields and comments, and sets rank when you reorder cards. Every change is made as you, using your own Jira permissions, and appears in Jira's history like any other change.</p>
             </div>
           </section>
 
@@ -88,10 +89,11 @@
                 <tbody>
                   <tr><td>Selected board preference</td><td>Remembers which board you last viewed in a project</td></tr>
                   <tr><td>Board display preferences</td><td>Your display settings (e.g. completed item retention period)</td></tr>
-                  <tr><td>Work item ordering</td><td>Custom ordering of items on the board</td></tr>
+                  <tr><td>Sub-task lane order</td><td>The order of sub-tasks within each lane (work item order is kept in Jira's own rank, not by the app)</td></tr>
+                  <tr><td>Usage prompt state</td><td>The date you first used the app and a count of board visits, used to time the in-app feedback and review prompts</td></tr>
                 </tbody>
               </table>
-              <p>These preferences are scoped per user using your Atlassian account identifier. No display names, email addresses, or other profile data is stored.</p>
+              <p>Preferences and prompt state are stored per user, keyed by your Atlassian account identifier. Sub-task lane order is shared by everyone in the project and contains only work item keys. No display names, email addresses, or other profile data is stored.</p>
               <p>All stored data resides entirely within Atlassian's cloud infrastructure and is encrypted at rest by Atlassian.</p>
             </div>
           </section>
@@ -105,7 +107,7 @@
                 <li>Set cookies</li>
                 <li>Send data to external servers or third parties</li>
                 <li>Collect email addresses, IP addresses, or device information</li>
-                <li>Log user activity</li>
+                <li>Log what you do on the board (the only usage data kept is the prompt counter listed above)</li>
                 <li>Use advertising or profiling</li>
               </ul>
               <p>This is unchanged and still fully accurate — the app makes no outbound requests to anything outside Atlassian's infrastructure (see the <a href="/security">Security Statement</a>).</p>
@@ -146,6 +148,7 @@
             <div class="content">
               <ul>
                 <li>Stored preferences are retained for as long as the app is installed</li>
+                <li>Each week the app reports the account identifiers it stores to Atlassian, and deletes stored data for any account Atlassian reports as closed</li>
                 <li>When the app is uninstalled, all Forge Storage data associated with the installation is deleted</li>
                 <li>There is no data retained after uninstallation</li>
               </ul>

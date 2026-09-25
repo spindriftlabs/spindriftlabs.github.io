@@ -6,7 +6,7 @@
   <script src="/assets/js/consent.js" defer></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Capabilities — Old Skool Board</title>
-  <meta name="description" content="Everything Old Skool Board can do today — board layout, issue modal, filtering, drag-and-drop ranking, and more." />
+  <meta name="description" content="Everything Old Skool Board can do today — your Jira columns, work item details, filtering, drag-and-drop ranking, and more." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300..700;1,300..700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -50,18 +50,19 @@
             <h2>Board layout</h2>
             <div class="content">
               <ul>
-                <li>Three-column board — To Do, In Progress, and Done — Jira statuses mapped to status categories</li>
-                <li>Sub-task lanes in the In Progress column, driven by your Jira workflow</li>
-                <li>Split-pane layout — fixed parent item panel with scrollable sub-task lanes</li>
+                <li>Your Jira board's own columns — same names, same order, including columns that hold several statuses</li>
+                <li>Expand any column to see its sub-task lanes, driven by your Jira workflow</li>
+                <li>Split-pane layout in the expanded column — fixed parent item panel with scrollable sub-task lanes</li>
+                <li>Unmapped work items shown below the board, so work whose status has no column is never silently lost</li>
                 <li>Epic chips on cards, colour-coded to match Jira</li>
                 <li>Issue type icons on every card</li>
-                <li>Kanban retention — hide completed items older than 1, 2, or 4 weeks</li>
+                <li>Done retention on company-managed Kanban boards — hide completed items not updated in 1, 2, or 4 weeks</li>
               </ul>
             </div>
           </section>
 
           <section>
-            <h2>Issue modal</h2>
+            <h2>Work item details</h2>
             <div class="content">
               <p>Click any card to open its full detail view without leaving the board.</p>
               <ul>
@@ -82,9 +83,9 @@
             <div class="content">
               <ul>
                 <li>Drag a card to choose its status and its position in one gesture — a column with several statuses shows a stack of status boxes to drop into, then an insertion line for exact placement</li>
-                <li>Card order syncs with Jira's native rank — reorder in Old Skool Board or in Jira and both stay in step</li>
-                <li>Sub-task order within a lane stays specific to Old Skool Board, since Jira has no native way to rank within a lane</li>
-                <li>If a board's filter isn't ordered by Jira's Rank field, or you don't have permission to rank issues, Old Skool Board says so instead of silently undoing the drop</li>
+                <li>Card order is saved to Jira's native rank — reorder in Old Skool Board or in Jira, and each shows the same order when it loads</li>
+                <li>Sub-task order within a lane is kept by Old Skool Board for now</li>
+                <li>If a board's filter isn't ordered by Jira's Rank field, or you don't have permission to rank issues, Old Skool Board says so instead of silently undoing the drop. You can still change status; the item goes to the end of the column</li>
               </ul>
             </div>
           </section>
@@ -106,6 +107,7 @@
             <div class="content">
               <ul>
                 <li>Inline creation for parent items and sub-tasks — add work without leaving the board</li>
+                <li>Choose the status when creating in a column that holds several statuses</li>
                 <li>Choose issue type when creating</li>
                 <li>New sub-tasks land in the correct lane and status</li>
               </ul>
@@ -116,8 +118,7 @@
             <h2>Board management</h2>
             <div class="content">
               <ul>
-                <li>Automatically maps to your current Jira board</li>
-                <li>Column-to-status mapping — map your three columns to the right Jira statuses on first use</li>
+                <li>Automatically maps to your current Jira board — no setup, no status mapping</li>
                 <li>Per-user preferences saved automatically</li>
               </ul>
             </div>
@@ -126,10 +127,13 @@
           <section>
             <h2>Requirements</h2>
             <div class="content">
+              <p>See also <a href="/docs/getting-started#known-limitations">Known limitations</a>.</p>
               <ul>
+                <li>Jira Software board, Scrum or Kanban</li>
                 <li>Jira Cloud (Server and Data Center are not supported)</li>
                 <li>Desktop browser (mobile and tablet are not supported)</li>
                 <li>Works best with parent items that have sub-tasks — limited value for flat issue structures</li>
+                <li>Reordering needs a board filter ordered by Rank and Jira's Schedule issues permission</li>
                 <li>Active Marketplace license required</li>
               </ul>
             </div>

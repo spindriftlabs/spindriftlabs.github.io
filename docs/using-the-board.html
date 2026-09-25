@@ -6,7 +6,7 @@
   <script src="/assets/js/consent.js" defer></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Using the board — Old Skool Board</title>
-  <meta name="description" content="How to use Old Skool Board — layout, moving work items, creating items, and settings." />
+  <meta name="description" content="How to use Old Skool Board — board layout, moving work items, creating inline, work item details, and hiding completed items." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300..700;1,300..700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -62,16 +62,16 @@
           <section>
             <h2>Moving parent items</h2>
             <div class="content">
-              <p>Drag a parent item to another column to change its status. Moving a card triggers the same Jira workflow transition as moving it on your native Jira board. When the destination column holds more than one status, it turns into a box for each status while you drag, so you choose exactly where the item goes. The column you're dragging from stays as cards, so you can reorder within it straight away.</p>
+              <p>Drag a parent item to another column to change its status. This triggers the same Jira workflow transition as moving it on your native Jira board. When a column holds more than one status, it splits into one box per status while you drag, so you choose exactly which status the work item gets.</p>
               <a href="/assets/img/status-boxes.png" target="_blank">
                 <img src="/assets/img/status-boxes.png" alt="Dragging a card over the Review and Done columns, each shown as a box per status: Testing and In Review, Done and Won't Do" class="doc-img" />
               </a>
-              <p>Pause on a status box and the column switches back to its cards with a blue insertion line, so you can pick the item's position as well as its status. Or drop straight onto the box to add the item at the end of the column. Card order is saved to Jira's own rank, so Old Skool Board and your Jira board always show the same order each time they load.</p>
+              <p>Pause on a status box and the column switches back to its cards with a blue insertion line, so you can pick the position as well as the status. A column with a single status shows its cards and insertion line straight away, and the column you're dragging from starts as cards so you can reorder within it. Or drop straight onto a box in another column to add the work item at the end of that column. Parent item order is saved to Jira's own rank, so Old Skool Board and your Jira board show the same order when they load.</p>
               <a href="/assets/img/moving-parent-items.png" target="_blank">
                 <img src="/assets/img/moving-parent-items.png" alt="Card being placed in the Review column between two cards, with a blue insertion line and an In Progress to In Review label in the column header" class="doc-img" />
               </a>
-              <p>When a move changes status, the board briefly checks which statuses are available before sending it to Jira. You can press <strong>Cancel</strong> or Escape until the move is sent. The board handles one move at a time; if a move is still finishing, wait a moment and try again. If a transition isn't allowed by your workflow, you'll see a message and the card stays where it was.</p>
-              <p>Reordering isn't available on every board. If your board's filter isn't ordered by Rank, if Old Skool Board couldn't check the board's ranking setup, or if you don't have permission to rank in Jira, the board tells you why. You can still move items between statuses; they're added at the end of the column. See <a href="/docs/getting-started#known-limitations">Known limitations</a>.</p>
+              <p>When a move changes status, you have a moment to press <strong>Cancel</strong> (or Escape) before it's sent to Jira. The board handles one move at a time; if a move is still finishing, wait a moment and try again. If a transition isn't allowed by your workflow, you'll see a message and the card stays where it was.</p>
+              <p>Reordering parent items needs a board filter ordered by Rank and Jira's <strong>Schedule work items</strong> and <strong>Edit work items</strong> permissions. Without them, multi-status columns stay as boxes, no insertion line appears, and if you try to reorder the board tells you why. A missing permission is only discovered the first time you try; card order is read-only after that. You can still change status: the work item is placed at the end of the column for now, and follows your board's own order after a reload. See <a href="/docs/getting-started#known-limitations">Known limitations</a>.</p>
             </div>
           </section>
 
@@ -79,7 +79,7 @@
             <h2>Moving sub-tasks</h2>
             <div class="content">
               <p>Drag a sub-task between lanes in the expanded column. Each lane corresponds to a status in your Jira sub-task workflow. You can also reorder sub-tasks within a lane by dragging them up or down. A blue line shows where the sub-task will land.</p>
-              <p>Sub-task order within a lane is kept by Old Skool Board rather than in Jira.</p>
+              <p>Sub-task order within a lane is kept by Old Skool Board, not Jira, and is shared by everyone in the project.</p>
               <a href="/assets/img/moving-subtasks.png" target="_blank">
                 <img src="/assets/img/moving-subtasks.png" alt="Sub-task being dragged between lanes, with a blue insertion line showing where it will land" class="doc-img" />
               </a>
@@ -89,8 +89,8 @@
           <section>
             <h2>Creating items inline</h2>
             <div class="content">
-              <p>Click <strong>+ Create</strong> at the bottom of a column to create a parent item, or inside a sub-task lane to create a sub-task. Type a title and press Enter to save, or Escape to cancel.</p>
-              <p>If the column holds more than one status, pick one from <strong>Choose a status</strong> before creating. Columns showing <strong>No statuses mapped</strong> have no create option. On Scrum boards, new items go to your Jira backlog, not the active sprint. They won't stay on the board until they're added to the sprint.</p>
+              <p>Hover near the bottom of a column and click <strong>+ Create</strong> to create a parent item, or hover a sub-task lane beside a parent item and click <strong>+ Create</strong> there to create a sub-task. Type a title and press Enter to save, or Escape to cancel.</p>
+              <p>If the column holds more than one status, pick one from <strong>Choose a status</strong> before creating. Columns showing <strong>No statuses mapped</strong> have no create option. On Scrum boards, new work items go to your Jira backlog, not the active sprint, so they won't stay on the board until they're added to the sprint.</p>
               <a href="/assets/img/creating-items-inline.png" target="_blank">
                 <img src="/assets/img/creating-items-inline.png" alt="Create form open in the Review column, with a Choose a status dropdown" class="doc-img" />
               </a>
@@ -101,7 +101,7 @@
             <h2>Opening work item details</h2>
             <div class="content">
               <p>Click any card title to open the work item's details without leaving the board. You'll see the description, sub-tasks, comments, and key details: status, assignee, reporter, priority, labels, and dates.</p>
-              <p>To open the work item in Jira instead, click the key (e.g. <strong>CSS-10</strong>) in the top-left corner.</p>
+              <p>To open the work item in Jira instead, click its key (e.g. <strong>CSS-10</strong>) at the top left, or Cmd/Ctrl-click the card on the board.</p>
               <a href="/assets/img/opening-an-issue.png" target="_blank">
                 <img src="/assets/img/opening-an-issue.png" alt="Work item details for Migrate note storage to new schema, showing sub-tasks, comments and a details panel" class="doc-img" />
               </a>
@@ -111,8 +111,8 @@
           <section>
             <h2>Hiding completed items</h2>
             <div class="content">
-              <p>On company-managed Kanban boards, you can hide completed items that haven't been updated for a set period. Click the <strong>settings cog</strong> in the top bar and choose a <strong>Done retention</strong> period: 1 week, 2 weeks, 4 weeks, or Keep all.</p>
-              <p>This setting is saved per board, for your account only. It isn't available on Scrum boards or team-managed boards.</p>
+              <p>On company-managed Kanban boards, you can hide completed items that haven't been updated for a set period. Click the <strong>settings cog</strong> in the top-right corner of the board and choose a <strong>Done retention</strong> period: 1 week, 2 weeks, 4 weeks, or Keep all.</p>
+              <p>This setting is saved per board, for your account. It isn't available on Scrum boards or team-managed boards.</p>
               <a href="/assets/img/board-settings.png" target="_blank">
                 <img src="/assets/img/board-settings.png" alt="Board settings panel showing the Done retention setting" class="doc-img" />
               </a>

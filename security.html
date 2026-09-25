@@ -60,7 +60,7 @@
                 <li><strong>Platform:</strong> Atlassian Forge (Custom UI)</li>
                 <li><strong>Runtime:</strong> Forge serverless functions (Atlassian-hosted)</li>
                 <li><strong>Frontend:</strong> React application served via Forge Custom UI sandbox</li>
-                <li><strong>Communication:</strong> All API calls are made to Jira Cloud via Forge's <code>requestJira</code> bridge, as the signed-in user</li>
+                <li><strong>Communication:</strong> The frontend calls the app's Forge resolvers through Forge's <code>invoke</code> bridge; the resolvers call Jira Cloud using <code>api.asUser().requestJira</code>, as the signed-in user</li>
                 <li><strong>External network calls:</strong> None. The app makes no outbound requests to any server outside Atlassian's infrastructure.</li>
               </ul>
             </div>
@@ -69,8 +69,8 @@
           <section>
             <h2>Data flow</h2>
             <div class="content">
-              <p>Old Skool Board reads and updates work item, board, and workflow data in Jira Cloud using the Jira REST API via Forge's <code>requestJira</code> mechanism. Updates (creating work items and sub-tasks, changing status, editing fields and comments, and setting rank) are made as the signed-in user, with that user's Jira permissions. All data flows between the app and Jira remain within Atlassian's infrastructure.</p>
-              <p>The app does not send data to external servers, use analytics or tracking services, set cookies, or log user activity outside Atlassian's platform. This describes the Jira Cloud app specifically — the marketing website (spindriftlabs.net) is a separate system and uses Google Analytics; see the <a href="/privacy">Privacy Policy's</a> "Website analytics" section.</p>
+              <p>Old Skool Board reads and updates work item, board, and workflow data in Jira Cloud using the Jira REST API, from Forge resolvers via <code>api.asUser().requestJira</code>. Updates (creating work items and sub-tasks, changing status, editing fields and comments, and setting rank) are made as the signed-in user, with that user's Jira permissions. All data flows between the app and Jira remain within Atlassian's infrastructure.</p>
+              <p>The app does not send data to external servers, use analytics or tracking services, set cookies, or record which work items users view or change (the only usage data kept is a per-user board visit count used to time in-app prompts). This describes the Jira Cloud app specifically — the marketing website (spindriftlabs.net) is a separate system and uses Google Analytics; see the <a href="/privacy">Privacy Policy's</a> "Website analytics" section.</p>
             </div>
           </section>
 
@@ -83,14 +83,15 @@
                   <tr><th>What</th><th>Purpose</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>Selected board preference</td><td>Which board a user last viewed in a project</td></tr>
-                  <tr><td>Board display preferences</td><td>User-specific display settings</td></tr>
+                  <tr><td>Selected board preference</td><td>Which board a user last viewed in a project (its ID and name)</td></tr>
+                  <tr><td>Board preferences</td><td>Per-user settings and last-used filters for each board: completed item retention, type, label and quick-filter selections, quick-filter visibility, and default statuses for creating items</td></tr>
                   <tr><td>Sub-task lane order</td><td>The order of sub-tasks within each lane, shared per project (work item order is kept in Jira's rank)</td></tr>
-                  <tr><td>Usage prompt state</td><td>First-use date and board visit count per user, used to time in-app feedback and review prompts</td></tr>
+                  <tr><td>Usage prompt state</td><td>Per user: first-use date, first date on a paid licence, board visit count, and prompt-shown flags, used to time in-app feedback and review prompts</td></tr>
+                  <tr><td>Work item order (earlier versions)</td><td>Work item keys in arranged order, written by versions before 3.10; no longer written or read, and deleted on uninstall</td></tr>
                 </tbody>
               </table>
               <p>Keys for preferences and prompt state include the user's Atlassian account ID to scope them per user. Sub-task lane order keys contain only the project, work item, and lane. No display names, email addresses, or other personal profile data is stored.</p>
-              <p>The app reports the account IDs it stores to Atlassian's personal data reporting API each week, and deletes stored data for any account Atlassian reports as closed.</p>
+              <p>Each week the app reports the account IDs stored with board preferences and selected-board records to Atlassian's personal data reporting API, and deletes those records for any account Atlassian reports as closed.</p>
               <p>All Forge Storage data is encrypted at rest by Atlassian, scoped to the app installation, and deleted when the app is uninstalled.</p>
             </div>
           </section>
@@ -98,7 +99,7 @@
           <section>
             <h2>Authentication</h2>
             <div class="content">
-              <p>Authentication is handled entirely by the Atlassian platform. Old Skool Board does not implement its own authentication. The app respects Jira's existing permission model — users can only view and modify issues they have access to in Jira.</p>
+              <p>Authentication is handled entirely by the Atlassian platform. Old Skool Board does not implement its own authentication. The app respects Jira's existing permission model — users can only view and modify work items they have access to in Jira.</p>
             </div>
           </section>
 

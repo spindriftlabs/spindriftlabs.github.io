@@ -64,16 +64,16 @@
           <section>
             <h2>Work item details</h2>
             <div class="content">
-              <p>Click any card to open its full detail view without leaving the board.</p>
+              <p>Click any card title to open its full details without leaving the board.</p>
               <ul>
                 <li>Rich text description editing with bold, italic, underline, links, and lists (powered by TipTap)</li>
                 <li>@mentions — type <code>@</code> to search and mention teammates</li>
                 <li>Comments — read, add, and reply</li>
-                <li>Linked issues and sub-tasks, with drill-in navigation</li>
+                <li>Linked work items and sub-tasks, with drill-in navigation</li>
                 <li>Detail sidebar — edit assignee, priority, labels, status, due date, and start date</li>
-                <li>Change issue type from the card or the modal</li>
+                <li>Change issue type from the card or its details</li>
                 <li>Inline title editing</li>
-                <li>Open in Jira — Cmd/Ctrl-click a card or use the modal link to jump to native Jira</li>
+                <li>Open in Jira — Cmd/Ctrl-click a card, or click the key in the work item details</li>
               </ul>
             </div>
           </section>
@@ -82,10 +82,10 @@
             <h2>Drag-and-drop</h2>
             <div class="content">
               <ul>
-                <li>Drag a card to choose its status and its position in one gesture — a column with several statuses shows a stack of status boxes to drop into, then an insertion line for exact placement</li>
-                <li>Card order is saved to Jira's native rank — reorder in Old Skool Board or in Jira, and each shows the same order when it loads</li>
-                <li>Sub-task order within a lane is kept by Old Skool Board for now</li>
-                <li>If a board's filter isn't ordered by Jira's Rank field, or you don't have permission to rank issues, Old Skool Board says so instead of silently undoing the drop. You can still change status; the item goes to the end of the column</li>
+                <li>Drag a parent item to choose its status and its position in one gesture — a column with several statuses shows a box per status, then an insertion line for exact placement</li>
+                <li>Parent item order is saved to Jira's native rank — reorder in Old Skool Board or in Jira, and each shows the same order when it loads</li>
+                <li>Sub-task order within a lane is kept by Old Skool Board, not Jira, and is shared by everyone in the project</li>
+                <li>If your board's filter isn't ordered by Rank, or you don't have Jira's <strong>Schedule work items</strong> and <strong>Edit work items</strong> permissions, reordering is switched off and the board tells you why when you try, instead of silently undoing the drop. You can still change status</li>
               </ul>
             </div>
           </section>
@@ -97,7 +97,7 @@
                 <li>Text search across the board</li>
                 <li>Filter by issue type or label (multi-select)</li>
                 <li>Quick filters — toggle pills that match your Jira board's quick filter definitions</li>
-                <li>Filter selections persist per board</li>
+                <li>Type, label, and quick-filter selections are remembered per board, for your account (text search isn't)</li>
               </ul>
             </div>
           </section>
@@ -119,7 +119,7 @@
             <div class="content">
               <ul>
                 <li>Automatically maps to your current Jira board — no setup, no status mapping</li>
-                <li>Per-user preferences saved automatically</li>
+                <li>Settings and filters saved per board, for your account</li>
               </ul>
             </div>
           </section>
@@ -132,8 +132,8 @@
                 <li>Jira Software board, Scrum or Kanban</li>
                 <li>Jira Cloud (Server and Data Center are not supported)</li>
                 <li>Desktop browser (mobile and tablet are not supported)</li>
-                <li>Works best with parent items that have sub-tasks — limited value for flat issue structures</li>
-                <li>Reordering needs a board filter ordered by Rank and Jira's Schedule issues permission</li>
+                <li>Works best with parent items that have sub-tasks — limited value for work items without sub-tasks</li>
+                <li>Reordering parent items needs a board filter ordered by Rank and Jira's <strong>Schedule work items</strong> and <strong>Edit work items</strong> permissions</li>
                 <li>Active Marketplace license required</li>
               </ul>
             </div>

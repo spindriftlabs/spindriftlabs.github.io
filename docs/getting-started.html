@@ -6,7 +6,7 @@
   <script src="/assets/js/consent.js" defer></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Getting started — Old Skool Board</title>
-  <meta name="description" content="How to install and start using Old Skool Board for Jira, including requirements and known limitations." />
+  <meta name="description" content="How to install and start using Old Skool Board for Jira — requirements, board settings, and known limitations." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300..700;1,300..700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -50,7 +50,7 @@
             <h2>How Old Skool Board works</h2>
             <div class="content">
               <p>Old Skool Board is an extension of a Jira Software board — there is no need to create new boards from scratch. When you open it, it reads the configuration of whichever board you're currently viewing — columns, statuses, and board type (Kanban or Scrum) — and mirrors that setup automatically.</p>
-              <p>It picks up where your board leaves off. Kanban boards show your board's work; Scrum boards show the active sprint.</p>
+              <p>It picks up where your board leaves off. On Kanban boards you see everything on the board; on Scrum boards, the active sprint.</p>
             </div>
           </section>
 
@@ -61,8 +61,8 @@
                 <li><strong>Jira Software board</strong> — designed to work with existing Scrum or Kanban boards; other board types are not supported</li>
                 <li><strong>Jira Cloud</strong> — Server and Data Center are not supported</li>
                 <li><strong>Desktop browser</strong> — mobile and tablet are not supported</li>
-                <li><strong>Parent items with sub-tasks</strong> — the board's value comes from that relationship; it has limited use for flat issue structures</li>
-                <li><strong>For reordering cards</strong> — your board's filter must be ordered by Rank (as Jira's default board filters are), and you need Jira's <strong>Schedule issues</strong> permission</li>
+                <li><strong>Parent items with sub-tasks</strong> — the board's value comes from that relationship; it has limited use for work items without sub-tasks</li>
+                <li><strong>For reordering parent items</strong> — your board's filter must be ordered by Rank (as Jira's default board filters are), and you need Jira's <strong>Schedule work items</strong> and <strong>Edit work items</strong> permissions</li>
               </ul>
             </div>
           </section>
@@ -75,7 +75,7 @@
               <p>That said, we've found it works best when:</p>
               <ul>
                 <li><strong>Sub-tasks</strong> have their own dedicated workflow, separate from work items</li>
-                <li><strong>Every status</strong> on your board's workflow is mapped to a column, so nothing ends up under Unmapped work items</li>
+                <li><strong>Every status</strong> in your board's workflow is in a column, so nothing ends up under <strong>Unmapped work items</strong></li>
               </ul>
               <p>When work items are kept simple and sub-tasks carry the detail, the expanded column becomes a genuinely useful view of what's actually happening inside each item. But how you structure your Jira project is entirely up to you.</p>
             </div>
@@ -101,11 +101,11 @@
           <section>
             <h2>Board settings</h2>
             <div class="content">
-              <p>There's nothing to set up: the board reads its columns and statuses from Jira. Click the <strong>settings icon</strong> in the top-right corner of the board to open the Board settings panel. From here you can set:</p>
+              <p>There's nothing to set up: the board reads its columns and statuses from Jira. Click the <strong>settings cog</strong> in the top-right corner of the board to open the Board settings panel. From here you can set:</p>
               <ul>
                 <li><strong>Done retention</strong> (company-managed Kanban boards only) — hide completed items that haven't been updated in 1, 2, or 4 weeks</li>
               </ul>
-              <p>Settings are saved per board, for your account only.</p>
+              <p>On other boards there are no settings to change yet. Settings are saved per board, for your account.</p>
               <a href="/assets/img/board-settings.png" target="_blank">
                 <img src="/assets/img/board-settings.png" alt="Board settings panel showing the Done retention setting" class="doc-img" />
               </a>
@@ -116,12 +116,13 @@
             <h2>Known limitations</h2>
             <div class="content">
               <ul>
-                <li><strong>Backlog columns</strong> — columns with "Backlog" in their name are not shown. On Kanban boards, work items whose status only appears in a backlog column are not shown either.</li>
+                <li><strong>Backlog columns</strong> — columns with "Backlog" in their name are not shown. On Kanban boards, work items whose status only appears in a backlog column are not shown either; on Scrum boards they appear under <strong>Unmapped work items</strong>.</li>
                 <li><strong>Scrum boards without an active sprint</strong> — the board is empty until a sprint is started.</li>
-                <li><strong>Creating on Scrum boards</strong> — new items go to your Jira backlog, not the active sprint, so they won't stay on the board until they're added to the sprint.</li>
+                <li><strong>Parallel sprints</strong> — if a Scrum board has several active sprints, only one is shown.</li>
+                <li><strong>Creating on Scrum boards</strong> — new work items go to your Jira backlog, not the active sprint, so they won't stay on the board until they're added to the sprint.</li>
                 <li><strong>Done retention</strong> — available on company-managed Kanban boards only.</li>
-                <li><strong>Reordering</strong> — needs a board filter ordered by Rank and Jira's Schedule issues permission. Without them, you can still change an item's status.</li>
-                <li><strong>Mouse only</strong> — dragging work items has no keyboard equivalent.</li>
+                <li><strong>Reordering parent items</strong> — needs a board filter ordered by Rank and Jira's <strong>Schedule work items</strong> and <strong>Edit work items</strong> permissions. Without them, you can still change a work item's status.</li>
+                <li><strong>Mouse only</strong> — dragging work items has no keyboard equivalent; you can change status from the work item's details instead.</li>
               </ul>
             </div>
           </section>

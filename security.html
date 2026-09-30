@@ -89,7 +89,7 @@
                   <tr><td>Card order (earlier versions)</td><td>Work item keys in arranged order, written by versions before 3.10, and sub-task keys in arranged order per parent work item and lane, written by versions before 3.12; no longer written or read, and deleted on uninstall. Card order is now kept in Jira's rank</td></tr>
                 </tbody>
               </table>
-              <p>Keys for preferences and prompt state include the user's Atlassian account ID to scope them per user. Card order records from earlier versions are keyed by project (and, for sub-tasks, parent work item and lane) and hold only work item keys. No display names, email addresses, or other personal profile data is stored.</p>
+              <p>Keys for preferences and prompt state include the user's Atlassian account ID to scope them per user. Card order records from earlier versions are keyed by project (and, for sub-tasks, parent work item and lane) and hold only work item and sub-task keys. No display names, email addresses, or other personal profile data is stored.</p>
               <p>Each week the app reports the account IDs stored with board preferences and selected-board records to Atlassian's personal data reporting API, and deletes those records for any account Atlassian reports as closed.</p>
               <p>All Forge Storage data is encrypted at rest by Atlassian, scoped to the app installation, and deleted when the app is uninstalled.</p>
             </div>

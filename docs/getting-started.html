@@ -62,7 +62,7 @@
                 <li><strong>Jira Cloud</strong> — Server and Data Center are not supported</li>
                 <li><strong>Desktop browser</strong> — mobile and tablet are not supported</li>
                 <li><strong>Parent items with sub-tasks</strong> — the board's value comes from that relationship; it has limited use for work items without sub-tasks</li>
-                <li><strong>For reordering parent items</strong> — your board's filter must be ordered by Rank (as Jira's default board filters are), and you need Jira's <strong>Schedule work items</strong> and <strong>Edit work items</strong> permissions</li>
+                <li><strong>For reordering parent items</strong> — your board's filter must be ordered by Rank (as Jira's default board filters are), and you need Jira's <strong>Schedule work items</strong> and <strong>Edit work items</strong> permissions. Reordering sub-tasks needs the same permissions.</li>
               </ul>
             </div>
           </section>
@@ -70,12 +70,12 @@
           <section>
             <h2>How the board works best</h2>
             <div class="content">
-              <p>Old Skool Board places each work item in whichever of your board's columns holds its status, just as Jira does. Sub-tasks use their actual Jira status, appearing as lanes inside the expanded column.</p>
+              <p>Old Skool Board places each work item in whichever of your board's columns holds its status, just as Jira does. Sub-tasks appear in lanes inside the expanded column, and those lanes are your board's columns too, so each sub-task sits in the lane that holds its status.</p>
               <p>This means the board works with any workflow structure you already have.</p>
               <p>That said, we've found it works best when:</p>
               <ul>
-                <li><strong>Sub-tasks</strong> have their own dedicated workflow, separate from work items</li>
-                <li><strong>Every status</strong> in your board's workflow is in a column, so nothing ends up under <strong>Unmapped work items</strong></li>
+                <li><strong>Sub-tasks</strong> have their own dedicated workflow, separate from work items, and each of its statuses is in one of your board's columns</li>
+                <li><strong>Every status</strong> in your board's workflow is in a column, so no work item ends up under <strong>Unmapped work items</strong> and no sub-task is hidden</li>
               </ul>
               <p>When work items are kept simple and sub-tasks carry the detail, the expanded column becomes a genuinely useful view of what's actually happening inside each item. But how you structure your Jira project is entirely up to you.</p>
             </div>
@@ -121,7 +121,10 @@
                 <li><strong>Parallel sprints</strong> — if a Scrum board has several active sprints, only one is shown.</li>
                 <li><strong>Creating on Scrum boards</strong> — new work items go to your Jira backlog, not the active sprint, so they won't stay on the board until they're added to the sprint.</li>
                 <li><strong>Done retention</strong> — available on company-managed Kanban boards only.</li>
+                <li><strong>Unmapped sub-task statuses</strong> — a sub-task whose status isn't in any column isn't shown on the board, as on Jira's own board. It's still listed in its parent item's details. Add the status to a column in your Jira board settings to show it.</li>
                 <li><strong>Reordering parent items</strong> — needs a board filter ordered by Rank and Jira's <strong>Schedule work items</strong> and <strong>Edit work items</strong> permissions. Without them, you can still change a work item's status.</li>
+                <li><strong>Reordering sub-tasks</strong> — needs the same permissions, but not a Rank-ordered filter. If Jira refuses, sub-task order is read-only until the board reloads; you can still change a sub-task's status.</li>
+                <li><strong>Dragging sub-tasks</strong> — the dragged card can be clipped at the edge of the lane area, or drift away from the pointer when the lanes scroll sideways.</li>
                 <li><strong>Mouse only</strong> — dragging work items has no keyboard equivalent; you can change status from the work item's details instead.</li>
               </ul>
             </div>

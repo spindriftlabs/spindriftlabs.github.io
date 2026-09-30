@@ -51,9 +51,11 @@
             <div class="content">
               <ul>
                 <li>Your Jira board's own columns — same names, same order, including columns that hold several statuses</li>
-                <li>Expand any column to see its sub-task lanes, driven by your Jira workflow</li>
+                <li>Expand a column to see its sub-task lanes — the lanes are your board's own columns</li>
+                <li>Collapse the expanded column — at most one column is open, and you can close them all</li>
                 <li>Split-pane layout in the expanded column — fixed parent item panel with scrollable sub-task lanes</li>
-                <li>Unmapped work items shown below the board, so work whose status has no column is never silently lost</li>
+                <li>Unmapped work items shown below the board, so a work item whose status has no column is never silently lost</li>
+                <li>Sub-tasks in a status that no column includes are hidden, as on Jira's own board, and stay listed in their parent item's details</li>
                 <li>Epic chips on cards, colour-coded to match Jira</li>
                 <li>Issue type icons on every card</li>
                 <li>Done retention on company-managed Kanban boards — hide completed items not updated in 1, 2, or 4 weeks</li>
@@ -84,8 +86,10 @@
               <ul>
                 <li>Drag a parent item to choose its status and its position in one gesture — a column with several statuses shows a box per status, then an insertion line for exact placement</li>
                 <li>Parent item order is saved to Jira's native rank — reorder in Old Skool Board or in Jira, and each shows the same order when it loads</li>
-                <li>Sub-task order within a lane is kept by Old Skool Board, not Jira, and is shared by everyone in the project</li>
-                <li>If your board's filter isn't ordered by Rank, or you don't have Jira's <strong>Schedule work items</strong> and <strong>Edit work items</strong> permissions, reordering is switched off and the board tells you why when you try, instead of silently undoing the drop. You can still change status</li>
+                <li>Drag a sub-task within its parent item's row to choose its status and position the same way — a lane with several statuses shows a box per status, then an insertion line</li>
+                <li>Sub-task order is also saved to Jira's native rank, so Old Skool Board and Jira show the same sub-task order when they load</li>
+                <li>One sub-task move per parent item at a time — other rows and parent items stay free</li>
+                <li>If your board's filter isn't ordered by Rank, or you don't have Jira's <strong>Schedule work items</strong> and <strong>Edit work items</strong> permissions, reordering is switched off and the board tells you why when you try, instead of silently undoing the drop. Sub-task reordering needs only the permissions. You can still change status</li>
               </ul>
             </div>
           </section>
@@ -107,9 +111,9 @@
             <div class="content">
               <ul>
                 <li>Inline creation for parent items and sub-tasks — add work without leaving the board</li>
-                <li>Choose the status when creating in a column that holds several statuses</li>
+                <li>Choose the status when creating in a column or sub-task lane that holds several statuses</li>
                 <li>Choose issue type when creating</li>
-                <li>New sub-tasks land in the correct lane and status</li>
+                <li>New sub-tasks are created directly in the chosen status</li>
               </ul>
             </div>
           </section>
@@ -118,7 +122,7 @@
             <h2>Board management</h2>
             <div class="content">
               <ul>
-                <li>Automatically maps to your current Jira board — no setup, no status mapping</li>
+                <li>Automatically maps to your current Jira board — no setup in the app; sub-tasks appear when their statuses are mapped to a column in Jira</li>
                 <li>Settings and filters saved per board, for your account</li>
               </ul>
             </div>
@@ -133,7 +137,7 @@
                 <li>Jira Cloud (Server and Data Center are not supported)</li>
                 <li>Desktop browser (mobile and tablet are not supported)</li>
                 <li>Works best with parent items that have sub-tasks — limited value for work items without sub-tasks</li>
-                <li>Reordering parent items needs a board filter ordered by Rank and Jira's <strong>Schedule work items</strong> and <strong>Edit work items</strong> permissions</li>
+                <li>Reordering parent items needs a board filter ordered by Rank and Jira's <strong>Schedule work items</strong> and <strong>Edit work items</strong> permissions; reordering sub-tasks needs the same permissions</li>
                 <li>Active Marketplace license required</li>
               </ul>
             </div>

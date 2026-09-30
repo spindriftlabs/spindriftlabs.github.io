@@ -50,12 +50,13 @@
             <h2>Board layout</h2>
             <div class="content">
               <p>The board shows your Jira board's own columns, with the same names, in the same order. A column can hold more than one status, just as it does in Jira. Columns with "Backlog" in their name are left out.</p>
-              <p>One column is expanded at a time. Click any column header to expand it. In the expanded column, each parent item is pinned on the left with its sub-tasks arranged into lanes that follow your Jira sub-task workflow. The other columns show their cards in a compact list. Long column and lane names are shortened; hover over one to see it in full.</p>
-              <p>Parent items appear as yellow cards. Sub-tasks appear as blue cards.</p>
+              <p>Click a column header to expand it, and click the expanded column's header again to collapse it. At most one column is expanded at a time, and you can collapse them all. In the expanded column, each parent item is pinned on the left with its sub-tasks arranged into lanes. The lanes are your board's own columns, so each sub-task sits in the lane that holds its status. The other columns show their cards in a compact list. Long column and lane names are shortened; hover over one to see it in full.</p>
+              <p>Parent items appear as yellow cards. Sub-tasks appear as blue cards. A sub-task card shows its status when its lane holds more than one status.</p>
               <a href="/assets/img/board-layout.png" target="_blank">
-                <img src="/assets/img/board-layout.png" alt="Full board with To Do, In Progress, Review and Done columns; In Progress is expanded with parent items pinned beside their sub-task lanes" class="doc-img" />
+                <img src="/assets/img/board-layout.png" alt="Full board with To Do, In Progress, Review and Done columns; In Progress is expanded with parent items pinned beside sub-task lanes that are the same four columns" class="doc-img" />
               </a>
               <p>If a work item's status isn't in any column on your board, it appears under <strong>Unmapped work items</strong> below the board. To bring it onto the board, add that status to a column in your Jira board settings.</p>
+              <p>Sub-tasks are different: a sub-task whose status isn't in any column isn't shown on the board, just as on Jira's own board. It's still listed under <strong>Subtasks</strong> in its parent item's details, where you can open it. To bring it onto the board, add its status to a column.</p>
             </div>
           </section>
 
@@ -70,7 +71,7 @@
               <a href="/assets/img/moving-parent-items.png" target="_blank">
                 <img src="/assets/img/moving-parent-items.png" alt="Card being placed in the Review column between two cards, with a blue insertion line and an In Progress to In Review label in the column header" class="doc-img" />
               </a>
-              <p>When a move changes status, you have a moment to press <strong>Cancel</strong> (or Escape) before it's sent to Jira. The board handles one move at a time; if a move is still finishing, wait a moment and try again. If a transition isn't allowed by your workflow, you'll see a message and the card stays where it was.</p>
+              <p>When a move changes status, you have a moment to press <strong>Cancel</strong> (or Escape) before it's sent to Jira. The board handles one parent item move at a time; if one is still finishing, wait a moment and try again. If a transition isn't allowed by your workflow, you'll see a message and the card stays where it was.</p>
               <p>Reordering parent items needs a board filter ordered by Rank and Jira's <strong>Schedule work items</strong> and <strong>Edit work items</strong> permissions. Without them, multi-status columns stay as boxes, no insertion line appears, and if you try to reorder the board tells you why. A missing permission is only discovered the first time you try; card order is read-only after that. You can still change status: the work item is placed at the end of the column for now, and follows your board's own order after a reload. See <a href="/docs/getting-started#known-limitations">Known limitations</a>.</p>
             </div>
           </section>
@@ -78,11 +79,13 @@
           <section>
             <h2>Moving sub-tasks</h2>
             <div class="content">
-              <p>Drag a sub-task between lanes in the expanded column. Each lane corresponds to a status in your Jira sub-task workflow. You can also reorder sub-tasks within a lane by dragging them up or down. A blue line shows where the sub-task will land.</p>
-              <p>Sub-task order within a lane is kept by Old Skool Board, not Jira, and is shared by everyone in the project.</p>
+              <p>Drag a sub-task to another lane in its parent item's row to change its status. A sub-task stays with its parent item: other rows and the other columns don't take the drop.</p>
+              <p>The lane the sub-task starts in shows its cards with a blue insertion line straight away, so you can reorder within it. Any other lane that holds more than one status splits into one box per status while you drag. Pause on a box and that lane switches back to its cards, so you can pick the position as well as the status. Or drop straight onto a box: in another lane, the sub-task goes to the end of that lane; in its own lane, it keeps its place. A lane with a single status takes the drop directly.</p>
               <a href="/assets/img/moving-subtasks.png" target="_blank">
-                <img src="/assets/img/moving-subtasks.png" alt="Sub-task being dragged between lanes, with a blue insertion line showing where it will land" class="doc-img" />
+                <img src="/assets/img/moving-subtasks.png" alt="Sub-task being dragged in its parent item's row: its own lane shows a blue insertion line, while the Review and Done lanes each split into a box per status" class="doc-img" />
               </a>
+              <p>Sub-task order is saved to Jira's own rank, so Old Skool Board and your Jira board show the same sub-task order when they load. Reordering sub-tasks needs the same Jira permissions as reordering parent items, but not a board filter ordered by Rank. If Jira refuses, sub-task order is read-only until the board reloads. You can still change a sub-task's status, and parent item order isn't affected.</p>
+              <p>The board handles one sub-task move per parent item at a time. While a move is finishing, the sub-tasks in that row can't be dragged; other rows and parent items aren't affected.</p>
             </div>
           </section>
 
@@ -90,7 +93,7 @@
             <h2>Creating items inline</h2>
             <div class="content">
               <p>Hover near the bottom of a column and click <strong>+ Create</strong> to create a parent item, or hover a sub-task lane beside a parent item and click <strong>+ Create</strong> there to create a sub-task. Type a title and press Enter to save, or Escape to cancel.</p>
-              <p>If the column holds more than one status, pick one from <strong>Choose a status</strong> before creating. Columns showing <strong>No statuses mapped</strong> have no create option. On Scrum boards, new work items go to your Jira backlog, not the active sprint, so they won't stay on the board until they're added to the sprint.</p>
+              <p>If the column or sub-task lane holds more than one status, pick one from <strong>Choose a status</strong> before creating. Columns showing <strong>No statuses mapped</strong> have no create option. On Scrum boards, new work items go to your Jira backlog, not the active sprint, so they won't stay on the board until they're added to the sprint.</p>
               <a href="/assets/img/creating-items-inline.png" target="_blank">
                 <img src="/assets/img/creating-items-inline.png" alt="Create form open in the Review column, with a Choose a status dropdown" class="doc-img" />
               </a>
